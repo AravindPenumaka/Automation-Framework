@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-12-29T21:39:17 IST" name="Default suite" finished-at="2020-12-29T21:39:17 IST" duration-ms="78">
+  <suite name="Default suite" duration-ms="21638" started-at="2020-12-30T17:28:53Z" finished-at="2020-12-30T17:29:15Z">
     <groups>
     </groups>
-    <test started-at="2020-12-29T21:39:17 IST" name="Default test" finished-at="2020-12-29T21:39:17 IST" duration-ms="78">
-      <class name="BasePack.BaseClass">
-        <test-method is-config="true" signature="onStart()[pri:0, instance:BasePack.BaseClass@6ac13091]" started-at="2020-12-29T21:37:55 IST" name="onStart" finished-at="2020-12-29T21:39:17 IST" duration-ms="81642" status="PASS">
+    <test name="Default test" duration-ms="21638" started-at="2020-12-30T17:28:53Z" finished-at="2020-12-30T17:29:15Z">
+      <class name="TestCases.Login">
+        <test-method status="PASS" signature="onStart()[pri:0, instance:TestCases.Login@1a968a59]" name="onStart" is-config="true" duration-ms="1522" started-at="2020-12-30T22:58:51Z" finished-at="2020-12-30T22:58:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- onStart -->
-        <test-method is-config="true" signature="onMethodStrat()[pri:0, instance:BasePack.BaseClass@6ac13091]" started-at="2020-12-29T21:39:17 IST" name="onMethodStrat" finished-at="2020-12-29T21:39:17 IST" duration-ms="0" status="PASS">
+        <test-method status="PASS" signature="onMethodStrat()[pri:0, instance:TestCases.Login@1a968a59]" name="onMethodStrat" is-config="true" duration-ms="5530" started-at="2020-12-30T22:58:53Z" finished-at="2020-12-30T22:58:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- onMethodStrat -->
-        <test-method signature="Tets()[pri:0, instance:BasePack.BaseClass@6ac13091]" started-at="2020-12-29T21:39:17 IST" name="Tets" finished-at="2020-12-29T21:39:17 IST" duration-ms="11" status="PASS">
+        <test-method status="PASS" signature="LoginIntoApplication()[pri:0, instance:TestCases.Login@1a968a59]" name="LoginIntoApplication" duration-ms="15868" started-at="2020-12-30T22:58:59Z" finished-at="2020-12-30T22:59:14Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Tets -->
-        <test-method is-config="true" signature="onMethodEnd()[pri:0, instance:BasePack.BaseClass@6ac13091]" started-at="2020-12-29T21:39:17 IST" name="onMethodEnd" finished-at="2020-12-29T21:39:17 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- LoginIntoApplication -->
+        <test-method status="PASS" signature="onMethodEnd()[pri:0, instance:TestCases.Login@1a968a59]" name="onMethodEnd" is-config="true" duration-ms="201" started-at="2020-12-30T22:59:14Z" finished-at="2020-12-30T22:59:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- onMethodEnd -->
-        <test-method is-config="true" signature="onFinish()[pri:0, instance:BasePack.BaseClass@6ac13091]" started-at="2020-12-29T21:39:17 IST" name="onFinish" finished-at="2020-12-29T21:39:17 IST" duration-ms="1" status="PASS">
+        <test-method status="PASS" signature="onFinish()[pri:0, instance:TestCases.Login@1a968a59]" name="onFinish" is-config="true" duration-ms="0" started-at="2020-12-30T22:59:15Z" finished-at="2020-12-30T22:59:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- onFinish -->
-      </class> <!-- BasePack.BaseClass -->
+      </class> <!-- TestCases.Login -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

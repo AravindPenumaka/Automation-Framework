@@ -43,7 +43,7 @@ public class BaseClass {
 	@AfterSuite
 	public void onFinish() {
 
-		driver.quit();
+		
 	}
 
 }

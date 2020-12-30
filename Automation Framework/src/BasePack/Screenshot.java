@@ -21,7 +21,7 @@ public class Screenshot extends BaseClass {
 
             } else {
                 File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-                FileUtils.copyFile(scrFile, new File(""));
+                FileUtils.copyFile(scrFile, new File(System.getProperty("user.home")+"\\Desktop\\Result\\Screenshot.png"));
             }
         }
         return Path;

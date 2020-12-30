@@ -4,6 +4,8 @@ import java.time.Duration;
 import java.util.NoSuchElementException;
 
 import BasePack.Screenshot;
+import ExcelUtility.getExcelData;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,6 +13,7 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import com.google.common.base.Function;
@@ -20,8 +23,23 @@ import Reporting.addReport;
 public class Keywords extends BasePack.BaseClass {
 	addReport report = new addReport();
 	Screenshot sc = new Screenshot();
+	getExcelData data = new getExcelData();
 	public String scpath = "";
 	public String status = "";
+	
+	/***
+	 * @description opens URL
+	 * @param URLData
+	 */
+	public void openURL(String URLData){
+		try{
+			driver.manage().deleteAllCookies();
+			driver.get(data.getURL(URLData));
+			driver.manage().window().maximize();
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+	}
 
 	/***
 	 * @description performs click operation.
@@ -56,6 +74,8 @@ public class Keywords extends BasePack.BaseClass {
 	public void enterText(By loc, String textToEnter, String msg) {
 
 		try {
+			click(loc, msg);
+			driver.findElement(loc).clear();
 			driver.findElement(loc).sendKeys(textToEnter);
 			scpath = sc.getScreenshot(loc);
 			status = "entered text " + msg;
@@ -76,11 +96,12 @@ public class Keywords extends BasePack.BaseClass {
 	 * @description Wait for element to be located
 	 * @param loc
 	 */
-	public void Fluentwait(final By loc) {
+	public void Fluentwait(By loc) {
 
 		try {
-			Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(30))
-					.pollingEvery(Duration.ofSeconds(5)).ignoring(NoSuchElementException.class);
+			/*Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(30))
+					.pollingEvery(Duration.ofSeconds(2)).ignoring(AssertionError.class);*/
+			WebDriverWait wait = new WebDriverWait(driver, 90);
 			wait.until(ExpectedConditions.elementToBeClickable(loc));
 			if(!driver.findElement(loc).isEnabled()){
 				Fluentwait(loc);
