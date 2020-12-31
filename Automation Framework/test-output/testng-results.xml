@@ -2,28 +2,35 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="21638" started-at="2020-12-30T17:28:53Z" finished-at="2020-12-30T17:29:15Z">
+  <suite name="Default suite" duration-ms="43783" started-at="2020-12-31T16:23:55Z" finished-at="2020-12-31T16:24:39Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="21638" started-at="2020-12-30T17:28:53Z" finished-at="2020-12-30T17:29:15Z">
+    <test name="Default test" duration-ms="43783" started-at="2020-12-31T16:23:55Z" finished-at="2020-12-31T16:24:39Z">
       <class name="TestCases.Login">
-        <test-method status="PASS" signature="onStart()[pri:0, instance:TestCases.Login@1a968a59]" name="onStart" is-config="true" duration-ms="1522" started-at="2020-12-30T22:58:51Z" finished-at="2020-12-30T22:58:53Z">
+        <test-method status="PASS" signature="onStart()[pri:0, instance:TestCases.Login@239963d8]" name="onStart" is-config="true" duration-ms="2203" started-at="2020-12-31T21:53:53Z" finished-at="2020-12-31T21:53:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- onStart -->
-        <test-method status="PASS" signature="onMethodStrat()[pri:0, instance:TestCases.Login@1a968a59]" name="onMethodStrat" is-config="true" duration-ms="5530" started-at="2020-12-30T22:58:53Z" finished-at="2020-12-30T22:58:59Z">
+        <test-method status="PASS" signature="onMethodStrat(java.lang.reflect.Method)[pri:0, instance:TestCases.Login@239963d8]" name="onMethodStrat" is-config="true" duration-ms="5488" started-at="2020-12-31T21:53:55Z" finished-at="2020-12-31T21:54:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestCases.Login.LoginIntoApplication()]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- onMethodStrat -->
-        <test-method status="PASS" signature="LoginIntoApplication()[pri:0, instance:TestCases.Login@1a968a59]" name="LoginIntoApplication" duration-ms="15868" started-at="2020-12-30T22:58:59Z" finished-at="2020-12-30T22:59:14Z">
+        <test-method status="PASS" signature="LoginIntoApplication()[pri:0, instance:TestCases.Login@239963d8]" name="LoginIntoApplication" duration-ms="38119" started-at="2020-12-31T21:54:01Z" finished-at="2020-12-31T21:54:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginIntoApplication -->
-        <test-method status="PASS" signature="onMethodEnd()[pri:0, instance:TestCases.Login@1a968a59]" name="onMethodEnd" is-config="true" duration-ms="201" started-at="2020-12-30T22:59:14Z" finished-at="2020-12-30T22:59:15Z">
+        <test-method status="PASS" signature="onMethodEnd()[pri:0, instance:TestCases.Login@239963d8]" name="onMethodEnd" is-config="true" duration-ms="134" started-at="2020-12-31T21:54:39Z" finished-at="2020-12-31T21:54:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- onMethodEnd -->
-        <test-method status="PASS" signature="onFinish()[pri:0, instance:TestCases.Login@1a968a59]" name="onFinish" is-config="true" duration-ms="0" started-at="2020-12-30T22:59:15Z" finished-at="2020-12-30T22:59:15Z">
+        <test-method status="PASS" signature="onFinish()[pri:0, instance:TestCases.Login@239963d8]" name="onFinish" is-config="true" duration-ms="836" started-at="2020-12-31T21:54:39Z" finished-at="2020-12-31T21:54:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- onFinish -->

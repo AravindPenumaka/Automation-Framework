@@ -9,8 +9,11 @@ public class LoginPages extends Keywords{
 	
 	public void Login(){
 		
-		
-		click(ob.loginobj.LoginWithEmail, "Login with email");
+		if(isElementPresent(ob.loginobj.LoginWithEmail)){
+			click(ob.loginobj.LoginWithEmail, "Login with email");
+		}else{
+			click(ob.loginobj.LoginOrCreate, "Login Or Create Account");
+		}
 		enterText(ob.loginobj.Username, "aravindpenumaka@gmail.com", "Email");
 		click(ob.loginobj.Continue, "continue");
 		enterText(ob.loginobj.password, "Ar@vind250298", "Password");

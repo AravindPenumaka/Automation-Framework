@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="2" total="2" passed="0">
+  <reporter-output>
+    <line>
+      <![CDATA[Opend URL<a style='color:#32cd32;float: right'  target='_blank' href='C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_1\Opened URL.JPEG'>ScreenShot</a>]]>
+    </line>
+    <line>
+      <![CDATA[Entered Phone Number<a style='color:#32cd32;float: right'  target='_blank' href='C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_1\Entered Phone Number.JPEG'>ScreenShot</a>]]>
+    </line>
+    <line>
+      <![CDATA[Entered Password<a style='color:#32cd32;float: right'  target='_blank' href='C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_1\Entered Password.JPEG'>ScreenShot</a>]]>
+    </line>
+    <line>
+      <![CDATA[clicked on Submit Button<a style='color:#32cd32;float: right'  target='_blank' href='C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_1\clicked on Submit Button.JPEG'>ScreenShot</a>]]>
+    </line>
+    <line>
+      <![CDATA[waited for 10sec for element<br>Expected condition failed: waiting for element to be clickable: By.xpath: //button[@class='_2AkmmA _29YdH8'] (tried for 10 second(s) with 500 milliseconds interval)<a data-featherlight = 'C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_1\Unable to locate element.JPEG' href='C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_1\Unable to locate element.JPEG' target='_blank' style='color:#FFFFFF;float: right'>ScreenShot</a>]]>
+    </line>
+    <line>
+      <![CDATA[Opend URL<a style='color:#32cd32;float: right'  target='_blank' href='C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_2\Opened URL.JPEG'>ScreenShot</a>]]>
+    </line>
+    <line>
+      <![CDATA[Entered Phone Number<a style='color:#32cd32;float: right'  target='_blank' href='C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_2\Entered Phone Number.JPEG'>ScreenShot</a>]]>
+    </line>
+    <line>
+      <![CDATA[Entered Password<a style='color:#32cd32;float: right'  target='_blank' href='C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_2\Entered Password.JPEG'>ScreenShot</a>]]>
+    </line>
+    <line>
+      <![CDATA[clicked on Submit Button<a style='color:#32cd32;float: right'  target='_blank' href='C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_2\clicked on Submit Button.JPEG'>ScreenShot</a>]]>
+    </line>
+    <line>
+      <![CDATA[waited for 10sec for element<br>Expected condition failed: waiting for element to be clickable: By.xpath: //button[@class='_2AkmmA _29YdH8'] (tried for 10 second(s) with 500 milliseconds interval)<a data-featherlight = 'C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_2\Unable to locate element.JPEG' href='C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_2\Unable to locate element.JPEG' target='_blank' style='color:#FFFFFF;float: right'>ScreenShot</a>]]>
+    </line>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="61835" started-at="2020-12-31T16:29:08Z" finished-at="2020-12-31T16:30:10Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="61835" started-at="2020-12-31T16:29:08Z" finished-at="2020-12-31T16:30:10Z">
+      <class name="TestCases.SampleTestCase">
+        <test-method status="PASS" signature="setPath(org.testng.ITestContext)[pri:0, instance:TestCases.SampleTestCase@6e06451e]" name="setPath" is-config="true" duration-ms="1524" started-at="2020-12-31T21:59:06Z" finished-at="2020-12-31T21:59:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@6a937336]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setPath -->
+        <test-method status="PASS" signature="onStart(java.lang.reflect.Method)[pri:0, instance:TestCases.SampleTestCase@6e06451e]" name="onStart" is-config="true" duration-ms="8175" started-at="2020-12-31T21:59:09Z" finished-at="2020-12-31T21:59:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestCases.SampleTestCase.SearchData_TestCase1(java.util.Map) throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- onStart -->
+        <test-method status="FAIL" signature="SearchData_TestCase1(java.util.Map)[pri:0, instance:TestCases.SampleTestCase@6e06451e]" name="SearchData_TestCase1" duration-ms="22662" started-at="2020-12-31T21:59:17Z" data-provider="TestData" finished-at="2020-12-31T21:59:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{ProductSearch=Asus VivoBook Gaming}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="CustomException.MyException">
+            <message>
+              <![CDATA[Unable to locate element By.xpath: //button[@class='_2AkmmA _29YdH8']Expected condition failed: waiting for element to be clickable: By.xpath: //button[@class='_2AkmmA _29YdH8'] (tried for 10 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[CustomException.MyException: Unable to locate element By.xpath: //button[@class='_2AkmmA _29YdH8']Expected condition failed: waiting for element to be clickable: By.xpath: //button[@class='_2AkmmA _29YdH8'] (tried for 10 second(s) with 500 milliseconds interval)
+	at Reusables.Reusables.waitforEle(Reusables.java:109)
+	at Reusables.Reusables.click(Reusables.java:61)
+	at Pages.LoginPage.LoginintoApplication(LoginPage.java:23)
+	at TestCases.SampleTestCase.SearchData_TestCase1(SampleTestCase.java:24)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:100)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:811)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1137)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:753)
+	at org.testng.TestRunner.run(TestRunner.java:607)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:368)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:363)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:321)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:270)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1284)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1209)
+	at org.testng.TestNG.runSuites(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1096)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- CustomException.MyException -->
+          <reporter-output>
+            <line>
+              <![CDATA[Opend URL<a style='color:#32cd32;float: right'  target='_blank' href='C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_1\Opened URL.JPEG'>ScreenShot</a>]]>
+            </line>
+            <line>
+              <![CDATA[Entered Phone Number<a style='color:#32cd32;float: right'  target='_blank' href='C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_1\Entered Phone Number.JPEG'>ScreenShot</a>]]>
+            </line>
+            <line>
+              <![CDATA[Entered Password<a style='color:#32cd32;float: right'  target='_blank' href='C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_1\Entered Password.JPEG'>ScreenShot</a>]]>
+            </line>
+            <line>
+              <![CDATA[clicked on Submit Button<a style='color:#32cd32;float: right'  target='_blank' href='C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_1\clicked on Submit Button.JPEG'>ScreenShot</a>]]>
+            </line>
+            <line>
+              <![CDATA[waited for 10sec for element<br>Expected condition failed: waiting for element to be clickable: By.xpath: //button[@class='_2AkmmA _29YdH8'] (tried for 10 second(s) with 500 milliseconds interval)<a data-featherlight = 'C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_1\Unable to locate element.JPEG' href='C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_1\Unable to locate element.JPEG' target='_blank' style='color:#FFFFFF;float: right'>ScreenShot</a>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- SearchData_TestCase1 -->
+        <test-method status="PASS" signature="CloseBrowser(org.testng.ITestResult, org.testng.ITestContext)[pri:0, instance:TestCases.SampleTestCase@6e06451e]" name="CloseBrowser" is-config="true" duration-ms="973" started-at="2020-12-31T21:59:40Z" finished-at="2020-12-31T21:59:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=SearchData_TestCase1 status=FAILURE method=SampleTestCase.SearchData_TestCase1(java.util.Map)[pri:0, instance:TestCases.SampleTestCase@6e06451e] output=Opend URL<a style='color:#32cd32;float: right'  target='_blank' href='C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_1\Opened URL.JPEG'>ScreenShot</a>]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@6a937336]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseBrowser -->
+        <test-method status="PASS" signature="onStart(java.lang.reflect.Method)[pri:0, instance:TestCases.SampleTestCase@6e06451e]" name="onStart" is-config="true" duration-ms="5892" started-at="2020-12-31T21:59:41Z" finished-at="2020-12-31T21:59:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestCases.SampleTestCase.SearchData_TestCase1(java.util.Map) throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- onStart -->
+        <test-method status="FAIL" signature="SearchData_TestCase1(java.util.Map)[pri:0, instance:TestCases.SampleTestCase@6e06451e]" name="SearchData_TestCase1" duration-ms="22729" started-at="2020-12-31T21:59:47Z" data-provider="TestData" finished-at="2020-12-31T22:00:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{ProductSearch=Apple MacBook Pro}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="CustomException.MyException">
+            <message>
+              <![CDATA[Unable to locate element By.xpath: //button[@class='_2AkmmA _29YdH8']Expected condition failed: waiting for element to be clickable: By.xpath: //button[@class='_2AkmmA _29YdH8'] (tried for 10 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[CustomException.MyException: Unable to locate element By.xpath: //button[@class='_2AkmmA _29YdH8']Expected condition failed: waiting for element to be clickable: By.xpath: //button[@class='_2AkmmA _29YdH8'] (tried for 10 second(s) with 500 milliseconds interval)
+	at Reusables.Reusables.waitforEle(Reusables.java:109)
+	at Reusables.Reusables.click(Reusables.java:61)
+	at Pages.LoginPage.LoginintoApplication(LoginPage.java:23)
+	at TestCases.SampleTestCase.SearchData_TestCase1(SampleTestCase.java:24)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:100)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:811)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1137)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:753)
+	at org.testng.TestRunner.run(TestRunner.java:607)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:368)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:363)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:321)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:270)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1284)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1209)
+	at org.testng.TestNG.runSuites(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1096)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- CustomException.MyException -->
+          <reporter-output>
+            <line>
+              <![CDATA[Opend URL<a style='color:#32cd32;float: right'  target='_blank' href='C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_2\Opened URL.JPEG'>ScreenShot</a>]]>
+            </line>
+            <line>
+              <![CDATA[Entered Phone Number<a style='color:#32cd32;float: right'  target='_blank' href='C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_2\Entered Phone Number.JPEG'>ScreenShot</a>]]>
+            </line>
+            <line>
+              <![CDATA[Entered Password<a style='color:#32cd32;float: right'  target='_blank' href='C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_2\Entered Password.JPEG'>ScreenShot</a>]]>
+            </line>
+            <line>
+              <![CDATA[clicked on Submit Button<a style='color:#32cd32;float: right'  target='_blank' href='C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_2\clicked on Submit Button.JPEG'>ScreenShot</a>]]>
+            </line>
+            <line>
+              <![CDATA[waited for 10sec for element<br>Expected condition failed: waiting for element to be clickable: By.xpath: //button[@class='_2AkmmA _29YdH8'] (tried for 10 second(s) with 500 milliseconds interval)<a data-featherlight = 'C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_2\Unable to locate element.JPEG' href='C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_2\Unable to locate element.JPEG' target='_blank' style='color:#FFFFFF;float: right'>ScreenShot</a>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- SearchData_TestCase1 -->
+        <test-method status="PASS" signature="CloseBrowser(org.testng.ITestResult, org.testng.ITestContext)[pri:0, instance:TestCases.SampleTestCase@6e06451e]" name="CloseBrowser" is-config="true" duration-ms="67" started-at="2020-12-31T22:00:09Z" finished-at="2020-12-31T22:00:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=SearchData_TestCase1 status=FAILURE method=SampleTestCase.SearchData_TestCase1(java.util.Map)[pri:0, instance:TestCases.SampleTestCase@6e06451e] output=Opend URL<a style='color:#32cd32;float: right'  target='_blank' href='C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_2\Opened URL.JPEG'>ScreenShot</a>]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@6a937336]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseBrowser -->
+        <test-method status="PASS" signature="getResult()[pri:0, instance:TestCases.SampleTestCase@6e06451e]" name="getResult" is-config="true" duration-ms="1614" started-at="2020-12-31T22:00:10Z" finished-at="2020-12-31T22:00:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+      </class> <!-- TestCases.SampleTestCase -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -14,16 +14,18 @@ import ExcelUtility.*;
 
 public class Screenshot extends BaseClass {
 
-    public String getScreenshot(By ele) throws Exception {
+    public String getScreenshot(By ele,String msg) throws Exception {
+    	
+    	String path =System.getProperty("user.home")+"\\Desktop\\Result\\"+msg+".png";
 
         if(new ExcelUtility.getExcelData().getConfiguration("Screenshot").equalsIgnoreCase("yes")) {
             if (new ExcelUtility.getExcelData().getConfiguration("Highlight").equalsIgnoreCase("yes")) {
 
             } else {
                 File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-                FileUtils.copyFile(scrFile, new File(System.getProperty("user.home")+"\\Desktop\\Result\\Screenshot.png"));
+                FileUtils.copyFile(scrFile, new File(path));
             }
         }
-        return Path;
+        return path;
     }
 }
