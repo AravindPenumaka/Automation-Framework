@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<parameter name="NGS_ExcelDataSheet" value="sanitySheet"></parameter>
+	<test name="Test">
+		<classes>
+			<class name="testCases.SanityTestCase" >
+				<methods>
+					<include name="Sanity_Actors"></include>
+					<include name="Sanity_Contract"></include>
+				</methods>
+			</class>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

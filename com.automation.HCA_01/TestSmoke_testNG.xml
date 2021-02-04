@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="HCA_NGS">
+	<test name="Smoke">
+		<classes>
+			<class name="testCases.CustomerInformationChange">
+				<methods>
+					<!-- <include name="CustomerInformationChange_VerifyKSIOPAddressChange_UsingCurrentAndFutureDate_058"/>
+					<include name="CustomerInformationChange_VerifyTaxAmount_WhenGarageAddressIsChanged_059"/> -->
+					<include name="CustomerInformationChange_CRM_customerInformationintegrationKSIOP_008"/>
+					<include name="CustomerInformationChange_CRM_customerInformationintegrationKSIOP_009"/>
+					<include name="CustomerInformationChange_CRM_customerInformationintegrationKSIOP_010"/>
+					<include name="CustomerInformationChange_CRM_customerInformationintegrationKSIOP_011"/>
+					<include name="CustomerInformationChange_CRM_customerInformationintegrationKSIOP_012"/>
+					<include name="CustomerInformationChange_CRM_customerInformationintegrationKSIOP_013_N"/>
+					<include name="CustomerInformationChange_CRM_customerInformationintegrationKSIOP_014"/>
+					<include name="CustomerInformationChange_CRM_customerInformationintegrationKSIOP_015"/>
+					<include name="CustomerInformationChange_CRM_customerInformationintegrationKSIOP_016"/>
+					<include name="CustomerInformationChange_CRM_customerInformationintegrationKSIOP_017"/>
+					<include name="CustomerInformationChange_CRM_customerInformationintegrationKSIOP_018"/>
+					<include name="CustomerInformationChange_CRM_customerInformationintegrationKSIOP_019"/>
+					<include name="CustomerInformationChange_CRM_customerInformationintegrationKSIOP_020"/>
+					<include name="CustomerInformationChange_CRM_customerInformationintegrationKSIOP_021"/>
+					<include name="CustomerInformationChange_CRM_customerInformationintegrationKSIOP_022"/>
+					<include name="CustomerInformationChange_CRM_customerInformationintegrationKSIOP_023"/>
+					<include name="CustomerInformationChange_CRM_customerInformationintegrationKSIOP_024_N"/>
+					<include name="CustomerInformationChange_CRM_customerInformationintegrationKSIOP_025"/>
+					<include name="CustomerInformationChange_CRM_customerInformationintegrationKSIOP_026"/>
+					<include name="CustomerInformationChange_CRM_customerInformationCRMScreenOverride_027"/>
+					<include name="CustomerInformationChange_CRM_customerInformationintegrationKSIOP_039"/>
+					<include name="CustomerInformationChange_CRM_customerInformationintegrationKSIOP_040"/>
+					<include name="CustomerInformationChange_CRM_customerNameChangeintegrationKSIOP_098"/>
+					<include name="CustomerInformationChange_CRM_customerNameChangeintegrationKSIOP_100"/>
+				</methods>
+			</class>
+			<!-- <class name="testCases.PaymentProcessing">
+				<methods>
+					<include name="PaymentProcessing_ManualBulkPayments_NonConsolidatedPayment_001" />
+					<include name="PaymentProcessing_ManualBulkPayments_ConsolidatedPayment_003" />
+					<include name="PaymentProcessing_ManualBulkPayments_ExcelConsolidatedPayment_004" />
+					<include name="PaymentProcessing_VerifyPaymentMethodValues_005" />
+					<include name="PaymentProcessing_VerifySpreadTypeValues_006" />
+				</methods>
+			</class> -->
+			<!-- <class name="testCases.Suspense">
+				<methods>
+					<include name="Suspense_Account_InHold" />
+					<include name="Suspense_AllowPaymentsToAccounts_IdentifiedAsDirectPay_033" />
+				</methods>
+			</class> -->
+			<!-- <class name="testCases.COB">
+				<methods>
+					<include name="COB_VerifyKSIOP_ManagesSalesRelated_RolesForLoans_024" />
+					<include name="COB_VerifyActorDetails_ExistingCustomer_048" />
+					<include name="COB_VerifyActorDetails_CustomerInfoValidation_056" />
+					<include name="COB_VerifyActors_StoreCustomerInformation_077" />
+					<include name="COB_VerifyKSIOP_ManageCustomerInformation_020" />
+				</methods>
+			</class> -->
+			<!--<class name="testCases.CreditDispute">
+				<methods>
+					<include name="CreditDispute_DirectCBReport_028" />
+				</methods>
+			</class>
+			 <class name="testCases.ApplicationSubmission">
+				<methods>
+					<include name="ApplicationSubmission_Lease_App_Submission_R1_TC02" />
+					<include name="ApplicationSubmission_Lease_App_Submission_R1_TC05" />
+				</methods>
+			</class> -->
+		</classes>
+	</test>
+</suite>

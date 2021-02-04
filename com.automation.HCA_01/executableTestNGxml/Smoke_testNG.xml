@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="HCA_NGS">
+	<test name="Smoke">
+		<classes>
+			<class name="testCases.PaymentProcessing">
+				<methods>
+					<include name="PaymentProcessing_ManualBulkPayments_NonConsolidatedPayment_001" />
+					<include name="PaymentProcessing_ManualBulkPayments_ConsolidatedPayment_003" />
+					<include name="PaymentProcessing_ManualBulkPayments_ExcelConsolidatedPayment_004" />
+					<include name="PaymentProcessing_VerifyPaymentMethodValues_005" />
+					<include name="PaymentProcessing_VerifySpreadTypeValues_006" />
+				</methods>
+			</class>
+			<class name="testCases.Suspense">
+				<methods>
+					<include name="Suspense_Account_InHold" />
+					<include name="Suspense_AllowPaymentsToAccounts_IdentifiedAsDirectPay_033" />
+				</methods>
+			</class>
+			<class name="testCases.COB">
+				<methods>
+					<include name="COB_VerifyCustomerWithMultipleAccounts_015" />
+					<include name="COB_VerifyKSIOP_ManageCustomerInformation_020" />
+					<include name="COB_VerifyKSIOP_ManagesSalesRelated_RolesForLoans_024" />
+					<include name="COB_CreateNewActors_ManagesDealers_027" />
+					<include name="COB_VerifyActorDetails_ExistingCustomer_048" />
+					<include name="COB_VerifyActorDetails_CustomerInfoValidation_056" />
+					<include name="COB_ActorsAllow_CustomerToModifyIncorrectDeatils_057" />
+					<include name="COB_VerifyActors_StoreCustomerInformation_077" />
+					<include name="COB_VerifyGeneral_DQProcess_076" />
+				</methods>
+			</class>
+			<class name="testCases.CreditDispute">
+				<methods>
+					<include name="CreditDispute_DirectOverRideData_024" />
+					<include name="CreditDispute_DirectDisputeScreen_026" />
+					<include name="CreditDispute_DirectCBReport_028" />
+				</methods>
+			</class>
+			<class name="testCases.CustomerInformationChange">
+				<methods>
+					<include name="CustomerInformationChange_CustomerInformationIntegration_007" />
+					<include name="CustomerInformationChange_CustomerInformationIntegration_012" />
+					<include name="CustomerInformationChange_CRM_CustomerIntegration_AddressValidation_014" />
+					<!-- <include name="CustomerInformationChange_ChangeGarageAddress_061" /> --> <!-- outofscope -->
+					<include name="CustomerInformationChange_ModifyAddressValidation_062" />
+					<include name="CustomerInformationChange_VerifyDemoChangeMethod_060" />
+					<include name="CustomerInformationChange_VerifyDataStewardAndModfyData_071" />
+					<include name="CustomerInformationChange_VerifyCompleteCustomerInformation_ChangesKSIOP_091" />
+					<include name="CustomerInformationChange_CRM_ChangeName_PendingDocument_096" />
+					<include name="CustomerInformationChange_CRM_ChangeName_ReceivingDocument_097" />
+				</methods>
+			</class>
+			<class name="testCases.ApplicationSubmission">
+				<methods>
+					<include name="ApplicationSubmission_Balloon_AppSubmission_DTK_TC01" />
+					<include name="ApplicationSubmission_Retail_AppSubmission_DTK_TC04" />
+					<include name="ApplicationSubmission_Lease_AppSubmissionCoApplicant_R1_TC02" />
+					<include name="ApplicationSubmission_Lease_AppSubmission_R1_TC05" />
+				</methods>
+			</class>
+			<class name="testCases.Fraud">
+				<methods>
+					<include name="Fraud_VerifyConsumerIdentityTheft_TC005" />
+					<include name="Fraud_TypeTitleWashing_017" />
+					<include name="Fraud_TypeSynIdentityFraud_020" />
+					<include name="Fraud_VerifySubleasing_001" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

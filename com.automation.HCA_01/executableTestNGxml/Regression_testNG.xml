@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="HCA_NGS">
+	<test name="Regression">
+		<classes>
+			<class name="testCases.InvoiceCenterManagement">
+				<methods>
+					<include name="InvoiceCenterManagement_DisplayReason_For_StopPayment_24"/>
+					<include name="InvoiceCenterManagement_CheckBillingUnit_008"/>
+					<include name="InvoiceCenterManagement_GenerateBillingStatement_009"/>
+					<include name="InvoiceCenterManagement_CheckConsolidatedBillingUnit_016"/>
+					<include name="InvoiceCenterManagement_UncheckConsolidatedBillingUnit_018"/>
+					<include name="InvoiceCenterManagement_CreateNewAddress_014"/>
+					<include name="InvoiceCenterManagement_CustoemrPreference_Paperless_020_1"/>
+					<include name="InvoiceCenterManagement_CustoemrPreference_StopStatement_020_2"/>
+					<include name="InvoiceCenterManagement_CustoemrPreference_StatementReadyNotification_020_3"/>
+					<include name="InvoiceCenterManagement_CustoemrPreference_PayemntReceiveNotification_020_4"/>
+					<include name="InvoiceCenterManagement_CheckConsolidatedBillingUnitforCVF_017"/>
+					<include name="InvoiceCenterManagement_UnCheckConsolidatedBillingUnitforCVF_017_01"/>
+					<include name="InvoiceCenterMgmt_VerifyTheAddressForTheCustomerInKSIOP_015_N"/>
+					<include name="InvoiceCenterMgmt_VerifyAlternateRecipientAddressIsAssignedForActiveBankruptcyAccounts_016_01"/>
+					<include name="InvoiceCenterManagement_GenerateBillingStatement_028"/>
+					<include name="InvoiceCenterMgmt_VerifyAccountConditionToACH_029"/>
+
+				</methods>
+			</class>
+			<class name="testCases.Impound">
+				<methods>
+					<include name="Impound_Raising_ImpoundSR_Retail_006_01"/>
+					<include name="Impound_Verify_ImpoundSR_013"/>
+					<include name="Impound_Verify_AbandonSR_019"/>
+					<include name="Impound_Verify_ImpoundSR_013"/>
+					<include name="Impound_Verify_AbandonSR_019"/>
+					<include name="Impound_Verify_ExistingImpoundCondition_CloseImpoundSR_020"/>
+					<include name="Impound_Verify_Not_Allow_Chargeoff_SmallBalanceWaiver_Account_028"/>
+					<include name="Impound_Verify_Not_Allow_Chargeoff_During_ChargeOff_Hold_Account_029"/>
+					<include name="Impound_Raising_ImpoundSR_Lease_006_02"/>
+					<include name="Impound_Raising_ImpoundSR_HCA_Coll_Lien_Lease_ControlMjob_005_01"/>
+					<include name="Impound_VerifyImpoundApplication_LeaseAccount_005_03"/>
+					<include name="Impound_VerifyImpoundApplication_RetailAccount_005_04"/>
+					   
+				 </methods>
+			</class>
+			
+			<class name="testCases.PayoffQuotation">
+					<methods>
+					<include name="PayoffQuotation_ValidateGoodThroughdate_ActiveRetailAccount_1"/>
+					<include name="PayoffQuotation_ValidateGoodThroughdate_Lease_DueDateLessThan10Dys_2"/>
+					<include name="PayoffQuotation_ValidateLeaseBuyout_NotAllowedForCustomer_AccountInCOState_8"/>
+					<include name="PayoffQuotation_ValidateLeaseBuyout_AllowedToDealer_AccountInFLState_18"/>
+					<include name="PayoffQuotation_ValidateLeaseBuyout_AllowedToInsurance_AccountInPAState_29"/>
+					<include name="PayoffQuotation_ValidateLeaseBuyout_AllowedForCustomer_TerminateAccount_58"/>
+					<include name="PayoffQuotation_ValidateLeaseBuyout_AllowedForCustomer_ChargedOffAccount_59"/>
+					<include name="PayoffQuotation_ValidateLeaseBuyout_AllowedToDealer_ActiveAccountWithBKCond_60"/>
+					<include name="PayoffQuotation_ValidateLeaseBuyout_AllowedToDealer_ActiveAccountWithFraudCond_61"/>
+					<include name="PayoffQuotation_ValidateLeaseBuyout_AllowedToInsurance_hargedOffAccount_67"/>
+					<include name="PayoffQuotation_ValidateGoodThroughDate_01"/>
+					<include name="PayoffQuotation_ValidatePayoffQuote_CustoemrRequset_04"/>
+					<include name="PayoffQuotation_ValidatePayoffQuote_DealerRequset_05"/>
+					<include name="PayoffQuotation_ValidatePayoffQuote_InsuranceRequset_06"/>
+					<include name="PayoffQuotation_ValidateGoodThroughDate_DuedatelessThan10_07"/>
+					<include name="PayoffQuotation_ValidateGoodThroughDate_DuedategreaterThan10_08"/>
+					<include name="PayoffQuotation_ValidateGoodThroughDate_MaturitydatelessThan10_09"/>
+					<include name="PayoffQuotation_ValidateGoodThroughDate_MaturitydateGreaterThan10_10"/>
+					<include name="PayoffQuotation_ValidateDCBuyOutState_14"/>
+			        </methods>
+			 </class>
+			
+			<class name="testCases.AutoChargeOff">
+					<methods>
+				<include name="AutoChargeOff_VerifyCVFAccount_ChargeOffJobComplete_1"/>
+				<include name="AutoChargeOff_VerifyActiveAccount_ChargeOffJobComplete_2"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_01Fraud_053"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_02TotalLossBKActiveCh7_054"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_03TotalLossBKCh11_13_055"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_04TotalLossBKDischCh7_056"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_05TotalLossBKDischCh11_13_057"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_06TotalLoss_058"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_07AbandonImpoundBKActiveCh7_059"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_08AbandonImpoundBKCh11_13_060"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_08AbandonImpoundBKCh11_13DISCHCh7_061"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_10AbandonImpoundBKDischCh11_13_062"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_11AbandonImpound_063"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_12AbandonOtherBKActiveCh7_064"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_13AbandonOtherBKCh11_13_065"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_14AbandonOtherBKDischCh7_066"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_15AbandonOtherBKDischCh11_13_067"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_16AbandonOther_068"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_17BKActiveCh7_069"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_18BKCh11_13_070"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_19BKDischCh7_071"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_20BKDischCh11_13_072"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_21Impound_073"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_22LitigationReplevin_074"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_23LegalDeptHold_075"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_24LitigationOther_076"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_25Deceased_077"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_27Repo_078"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_28Skip_079"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_28Skip_080"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_29Misc_081"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_01Fraud_082"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_02TotalLossBKActiveCh7_083"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_03TotalLossBKCh11_13_084"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_04TotalLossBKDischCh7_085"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_05TotalLossBKDischCh11_13_086"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_06TotalLoss_087"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_07AbandonImpoundBKActiveCh7_088"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_08AbandonImpoundBKCh11_13_089"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_09AbandonImpoundBKDischCh7_090"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_10AbandonImpoundBKDischCh11_13_091"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_11AbandonImpound_13_092"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_12AbandonOtherBKActiveCh7_093"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_13AbandonOtherBKCh11_13_094"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_14AbandonOtherBKDischCh7_095"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_15AbandonOtherBKDischCh11_13_096"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_16AbandonOther_097"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_17BKActiveCh7_098"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_18BKCh11_13_099"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_19BKDischCh7_100"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_20BKDischCh11_13_101"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_21Impound_102"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_22Impound_103"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_23LegalDeptHold_104"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_24LitigationOther_105"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_25Deceased_106"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_27Repo_107"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_28Skip_108"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_28Skip_109"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_29Misc_110"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_30BKActiveCh7LeaseET_111"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_31BKChLeaseET_112"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_32BKDischCh7LeaseET_113"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_33BKDischCh11_13LeaseET_114"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_34NonBKLeaseET_115"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_35BKActiveCh7LeasePostTermPPTX_116"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_36BKCh11_13LeasePostTermPPTX_117"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_37BKDischCh7LeasePostTermPPTX_118"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_38BKDischCh11_13LeasePostTermPPTX_119"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_39LeasePostTermPPTX_120"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_30BKActiveCh7LeaseET_121"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_31BKCh11_13LeaseET_122"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_32BKDischCh7LeaseET_123"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_33BKDischCh11_13LeaseET_124"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_34NonBKLeaseET_125"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_35BKActveCh7LeasepostTermPPTX_126"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_36BKCh11_13LeasePostTermPPTX_127"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_37BKDischCh7LeasePostTermPPTX_128"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_38BKDischCh11_13LeasePostTermPPTX_129"/>
+				<include name="AutoChargeOff_VerifyChargeOffReason_39LeasePostTermPPTX_130"/>
+				<include name="AutoChargeOff_VerifyChargeAccountStatus_018_3"/>
+                <include name="AutoChargeOff_VerifyBlackBookValue_131"/>
+					
+			</methods>
+			 </class>
+			 <class name="testCases.Legal">
+					<methods>
+					<include name="Legal_ConditionType_LegalImpoundCRM_003"/>
+					<include name="Legal_ConditionType_JudgementClosed_004"/>
+					<include name="Legal_ConditionType_EstateSearch_007"/>
+					<include name="Legal_ConditionType_LegalNassauCountyCRM_008"/>
+					<include name="Legal_CO_LegalApplication_010"/>
+					<include name="Legal_CO_LegalApplication_011"/>
+					<include name="Legal_VerifyTheProcessingOf_LegalAttorneyRetainedSR_012"/>
+					<include name="Legal_VerifyTheProcessingOf_LegalAttorneyRetainedSR_013"/>
+					<include name="Legal_CO_LegalApplication_014"/>
+					<include name="Legal_ConditionType_LegalImpoundCRM_003"/>
+					<include name="Legal_ConditionType_LegalEstateSearchCRM_004"/>
+					<include name="Legal_ConditionType_Impound_005"/>
+					<include name="Legal_ConditionType_ImpoundClosed_006"/>
+					<include name="Legal_ConditionType_LegalAffidavitOfDefenseCRM_007"/>
+					<include name="Legal_ConditionType_DemandClosed_012"/>
+					<include name="Legal_ConditionType_AffidavitOfDefense_013"/>
+					<include name="Legal_ConditionType_AffidavitOfDefenseClosed_014"/>
+					<include name="Legal_ConditionType_NassauCounty_015"/>
+					<include name="Legal_ConditionType_NassauCountyClosed_016"/>
+					<include name="Legal_ConditionType_Forfeiture_017"/>
+					<include name="Legal_ConditionType_ForfeitureClosed_018"/>
+					<include name="Legal_ConditionType_AttorneyRetained_019"/>
+					<include name="Legal_conditiontype_AttorneyRetainedClosed_020"/>
+					<include name="Legal_conditiontype_DepartmentHold_021"/>
+					<include name="Legal_ConditionType_DepartmentHoldClosed_022"/>
+					<include name="Legal_ConditionType_LegalAttorneyRetained_023"/>
+					<include name="Legal_ConditionType_LegalDepartmentHold_024"/>
+					
+					
+					</methods>
+			 </class>
+			<class name="testCases.Fraud">
+			<methods>
+			 <include name="Fraud_Validate_Status_SynIdentityFraud_Sumbmitted_CRM_001"/>
+			<include name="Fraud_Validate_Status_PaymentFraud_Sumbmitted_CRM_002"/>
+			<include name="Fraud_Validate_Status_FraudRing_Sumbmitted_CRM_003"/>
+			<include name="Fraud_Validate_Status_DealerMisrepresentation_Sumbmitted_CRM_005"/>
+			<include name="Fraud_Validate_Status_TitleWashing_Cancelled_CRM_010"/>
+			<include name="Fraud_Validate_Status_DealerMisrepresentation_Cancelled_CRM_011"/>
+			<include name="Fraud_Validate_Status_ConsumerIdentityTheft_Cancelled_CRM_012"/>
+			<include name="Fraud_Validate_Status_Syntheticidentityfraud_Confirmed_CRM_013"/>
+			<include name="Fraud_Verify_Status_PaymentFraud_Confirmed_014"/>
+			<include name="Fraud_Validate_Status_VictimOfConsumerIdentityTheft_018"/>
+			<include name="Fraud_SwapRoleOf_NonPrimary_ToPrimaryCustomer_ConsumerIdentityTheft_019"/>
+			<include name="Fraud_Secondary_Customer_Victim_ConsumerIdentityTheft_020"/>
+			<include name="Fraud_Primary_Customer_Victim_ConsumerIdentityTheft_021"/>
+			<include name="Fraud_Primary_Secondary_Customer_Victim_ConsumerIdentityTheft_022"/>
+			<include name="Fraud_FraudelentDisputeContract_ConsumerIDTheft_023"/>
+			<include name="Fraud_FraudelentDisputeContract_TitleWash_024"/>
+			<include name="Fraud_FraudelentDisputeContract_SyntheticID_025"/>
+			<include name="Fraud_FraudelentDisputeContract_PaymentFraud_026"/>
+			<include name="Fraud_FraudelentDisputeContract_Subleasing_027"/>
+			<include name="Fraud_FraudelentDisputeContract_Misrepresentation_028"/>
+			<include name="Fraud_TransferOfEquityFraudCondition_029"/>
+			<include name="Fraud_TransferOfEquityFraudCondition_030"/>
+			<include name="Fraud_SwappedFraudCondition_031"/>
+			<include name="Fraud_TransferOfEquityFraudCondition_Subleasing_033"/>
+            </methods>
+			 </class>
+			<class name="testCases.Bankruptcy">
+			<methods>
+			<include name="Bankruptcy_Verify_BKSR_Chapter7_Primary_Customer_002"/>
+			<include name="Bankruptcy_Peripheral_VerifyBKSR_BothPrimary_SecondaryChapter7_004"/>
+			<include name="Bankruptcy_Verify_BKSR_Chapter11_Primary_Customer_006"/>
+			<include name="Bankruptcy_Peripheral_VerifyBKSR_BothPrimary_SecondaryChapter11_009"/>
+			<include name="Bankruptcy_Peripheral_VerifyBKSR_PrimaryChapter11_SecondaryChapterOtherThan7_010"/>
+			<include name="Bankruptcy_Verify_BKSR_Chapter12_Primary_Customer_012"/>
+			<include name="Bankruptcy_Peripheral_VerifyBKSR_PrimaryChapter12_SecondaryChapterOtherThan7_015"/>
+			<include name="Bankruptcy_Verify_BKSR_Chapter13_Primary_Customer_017"/>
+			<include name="Bankruptcy_Peripheral_VerifyBKSR_BothPrimary_SecondaryChapter13_019"/>
+			<include name="Bankruptcy_Peripheral_VerifyBKSR_PrimaryChapter13_SecondaryChapterOtherThan7_020"/>
+			<include name="Bankruptcy_Application_VerifyBKSR_Chapter7_001"/>
+			<include name="Bankruptcy_Application_Verify_BKSR_PrimaryChapter11_SecondaryOtherThanChapter7_010"/>
+			<include name="Bankruptcy_Application_Verify_BKSR_PrimaryChapter12_SecondaryOtherThanChapter7_015"/>
+			<include name="Bankruptcy_Application_Verify_BKSR_PrimaryChapter13_017"/>
+			<include name="Bankruptcy_VerifyBKChapter7_021"/>
+			<include name="Bankruptcy_VerifyBKChapter7_024"/>
+			<include name="Bankruptcy_VerifyBKChapter7_025"/>
+			<include name="Bankruptcy_VerifyBKChapter11_030"/>
+			<include name="Bankruptcy_VerifyBKChapter12_031"/>
+			<include name="Bankruptcy_VerifyBKChapter13_038"/>
+			<include name="Bankruptcy_VerifyBKChapter13_039"/>
+			<include name="Bankruptcy_VerifyBKChapter13_040"/>
+			<include name="Bankruptcy_VerifyBKChapter11_047"/>
+			<include name="Bankruptcy_VerifyBKChapter12_051"/>
+			<include name="Bankruptcy_VerifyBKChapter13_056"/>
+		<include name="Bankruptcy_Application_VerifyBKSRPrimaryChapter7_SecondaryOtherThanChapter7_105"/>
+				<include name="Bankruptcy_Application_VerifyBKSR_Chapter11_106"/>
+				<include name="Bankruptcy_Application_VerifyBKSR_BothPrimary_SecondaryChapter12_114"/>
+				<include name="Bankruptcy_Application_VerifyBKSR_PrimaryChapter13_117"/>
+				<include name="Bankruptcy_Application_VerifyBKSR_SecondaryChapter11_128"/>
+				<include name="Bankruptcy_Application_VerifyBKSRPrimaryChapter12_SecondaryOtherThanChapter7_135"/>
+				<include name="Bankruptcy_Application_VerifyBKSRPrimaryChapter13_SecondaryOtherThanChapter7_140"/>
+				<include name="Bankruptcy_Application_VerifyDischargedBKSRBothPrimary_SecondaryChapter7_144"/>
+				<include name="Bankruptcy_Application_VerifyDischargedBKSR_PrimaryChapter11_147"/>
+				<include name="Bankruptcy_Application_VerifyDischargedBKSR_PrimaryChapter12_SecondaryOtherThanChapter7_155"/>
+				<include name="Bankruptcy_Application_VerifyDischargedBKSRChapter13_156"/>
+				<include name="Bankruptcy_Application_VerifyDismissedBKSRChapter7_161"/>
+				<include name="Bankruptcy_Application_VerifyDismissedBKSRChapter11_167"/>
+				<include name="Bankruptcy_Application_VerifyDismissedBKSR_SecondaryChapter12_173"/>
+				<include name="Bankruptcy_Application_VerifyDischargedBKSR_PrimaryChapter13_SecondaryOtherThanChapter7_180"/>
+				<include name="Bankruptcy_Application_VerifyNotBKSR_PrimaryChapter7_SecondaryOtherThanChapter7_185"/>
+				<include name="Bankruptcy_Application_VerifyNotBKSR_BothPrimary_SecondaryChapter11_189"/>
+				<include name="Bankruptcy_Application_VerifyNotBKSR_SecondaryChapter12_193"/>
+				<include name="Bankruptcy_Application_VerifyNotBKSR_Chapter13_196"/>
+				<include name="Bankruptcy_Application_VerifyNotBKSR_PrimaryChapter13_SecondaryOtherThanChapter7_200"/>
+				<include name="Bankruptcy_Verify_BKSR_Chapter7_Primary_Customer_002"/>
+				<include name="Bankruptcy_Peripheral_VerifyBKSR_BothPrimary_SecondaryChapter7_004"/>
+				<include name="Bankruptcy_Verify_BKSR_Chapter11_Primary_Customer_006"/>
+				<include name="Bankruptcy_Peripheral_VerifyBKSR_BothPrimary_SecondaryChapter11_009"/>
+				<include name="Bankruptcy_Peripheral_VerifyBKSR_PrimaryChapter11_SecondaryChapterOtherThan7_010"/>
+				<include name="Bankruptcy_Verify_BKSR_Chapter12_Primary_Customer_012"/>
+				<include name="Bankruptcy_Peripheral_VerifyBKSR_PrimaryChapter12_SecondaryChapterOtherThan7_015"/>
+				<include name="Bankruptcy_Verify_BKSR_Chapter13_Primary_Customer_017"/>
+				<include name="Bankruptcy_Peripheral_VerifyBKSR_BothPrimary_SecondaryChapter13_019"/>
+				<include name="Bankruptcy_Peripheral_VerifyBKSR_PrimaryChapter13_SecondaryChapterOtherThan7_020"/>
+				<include name="Bankruptcy_Application_VerifyBKSR_Chapter7_001"/>
+				<include name="Bankruptcy_Application_Verify_BKSR_PrimaryChapter11_SecondaryOtherThanChapter7_010"/>
+				<include name="Bankruptcy_Application_Verify_BKSR_PrimaryChapter12_SecondaryOtherThanChapter7_015"/>
+				<include name="Bankruptcy_Application_Verify_BKSR_PrimaryChapter13_017"/>
+				<include name="Bankruptcy_VerifyBKChapter7_021"/>
+				<include name="Bankruptcy_VerifyBKChapter7_024"/>
+				<include name="Bankruptcy_VerifyBKChapter7_025"/>
+				<include name="Bankruptcy_VerifyBKChapter11_030"/>
+				<include name="Bankruptcy_VerifyBKChapter12_031"/>
+				<include name="Bankruptcy_VerifyBKChapter13_038"/>
+				<include name="Bankruptcy_VerifyBKChapter13_039"/>
+				<include name="Bankruptcy_VerifyBKChapter13_040"/>
+				<include name="Bankruptcy_VerifyBKChapter11_047"/>
+				<include name="Bankruptcy_VerifyBKChapter12_051"/>
+				<include name="Bankruptcy_VerifyBKChapter13_056"/>
+								
+			</methods>
+			 </class>
+			 <class name="testCases.CreditDispute">
+			<methods>
+			 <include name="CreditDispute_DirectDisputeScreen_026_1"/>
+				<include name="CreditDispute_DirectValidate_027"/>
+				<include name="CreditDispute_DirectPermissions_030"/>
+				<include name="CreditDispute_DirectPermissions_030_1"/>
+				<include name="CreditDispute_DirectFinalCBReport_035"/>
+			 </methods>
+			 </class>
+			 <class name="testCases.ApplicationSubmission">
+			<methods>
+			<include name="ApplicationSubmission_RetailIndividual_App_Submission_DTK_TC01"/>
+			<include name="ApplicationSubmission_LeaseIndividual_App_Submission_R1_TC02"/>
+			<include name="ApplicationSubmission_BalloonIndividual_App_Submission_R1_TC05"/>
+			<include name="ApplicationSubmission_RetailJoint_App_Submission_DTK_TC04"/>
+			<include name="ApplicationSubmission_CoAppRetailIndividual_App_Submission_R1_TC03"/>
+
+			 </methods>
+			 </class>
+			  <class name="testCases.Suspense">
+			  <methods>
+				<include name="Suspense_CreateLeaseOverPayment_ActiveLeaseAccount_001"/>
+				<include name="Suspense_Account_InHold_30"/>
+				<include name="Suspense_AllowPayment_ToPostToLeagalAccounts_031"/>
+				<include name="Suspense_Account_StopPayment_29"/>
+
+			 </methods>
+			 </class>
+			  <class name="testCases.Suspense">
+			  <methods>
+			    <include name="COB_Verify_ExistingCustomerDetails_007"/>
+				<include name="COB_Verify_CustomerDetails_Managed_HomeAddress_008"/>
+				<include name="COB_Verify_CustomerDetails_Managed_HomeAddress_As_BaseAddress_009"/>
+				<include name="COB_Verify_Customer_DOB_BusinessOpeningDate_010"/>
+				<include name="COB_Verify_InputField_For_Business_Consumer_Customer_011"/>
+				<include name="COB_Verify_MultipleAccount_Consistant_PII_014"/>
+				<include name="COB_Verify_CustomerInfoChange_CPC_016"/>
+				<include name="COB_Verify_CustomerRoles_Loans_023"/>
+				<include name="COB_Verify_CompanyOrganizationRoles_Loans_025"/>
+				<include name="COB_Verify_LegalClassification_Vendor_026"/>
+				<include name="COB_Verify_ExistingCustomerDetails_Managed_HomeAddress_045"/>
+				<include name="COB_Verify_UpdatingCustomerDetails_Managed_HomeAddress_046"/>
+				<include name="COB_Verify_ExistingCustomerDetails_ModifiedAddress_047"/>
+				<include name="COB_Verify_ModifyAddress_DQTransactionProcess_070"/>
+				<include name="COB_Verify_DataSteward_WithWrongAddress_071"/>
+				<include name="COB_Verify_ModifyAddress_DataSteward_DQProcess_074"/>
+				<include name="COB_Verify_ModifyAddress_DataSteward_DQProcess_075"/>
+				<include name="COB_Verify_ImpItems_ChangeHistory_078"/>
+				
+
+			 </methods>
+			 </class>
+			   <class name="testCases.PaymentProcessing">
+			  <methods>
+			  <include name="PaymentProcessing_ManualPayment_Application_001"/>
+				<include name="PaymentProcessing_ExcelPayment_Application_002"/>
+				<include name="PaymentProcessing_ConsolidatedPayoff_Application_003"/>
+				<include name="PaymentProcessing_ConsolidatedExcelInput_Application_004"/>
+				<include name="PaymentProcessing_VerifyCenterCutResult_09"/>
+				<include name="PaymentProcessing_ConsolidatedPayoffSpreadType_Application_010"/>
+				<include name="PaymentProcessing_ManualPaymentReceivable_Application_011"/>
+				<include name="PaymentProcessing_ManualPaymentReceivable_Application_012"/>
+				<include name="PaymentProcessing_ManualPaymentAllotment_Application_013"/>
+				<include name="PaymentProcessing_ManualPayedOff_Application_014"/>
+				<include name="PaymentProcessing_ManualChargedOff_Application_015"/>
+				<include name="PaymentProcessing_PR_FeesCreditNoted_TC33"/>
+				<include name="PaymentProcessing_PR_WaivePropertyTax_Fees_TC40"/>
+				<include name="PaymentProcessing_PR_WaiveSalesTax_Fees_TC41"/>
+				<include name="PaymentProcessing_PR_CreateTasktoPaymentTeam_TC05"/>
+				<include name="PaymentProcessing_PR_ReversePaymentNSF_TC06"/>
+				<include name="PaymentProcessing_ManualPaymentApplication_007"/>
+				<include name="PaymentProcessing_PR_ReversePaymentNSF_ForLease_TC08"/>
+				<include name="PaymentProcessing_PR_ReversePaymentNSF_ForRetail_TC09"/>
+				<include name="PaymentProcessing_PR_NSFReverse_TC10"/>
+				<include name="PaymentProcessing_PR_UnallocatePaymentToReversePayment_TC14"/>
+				<include name="PaymentProcessing_PR_OperateReverseSuspense_TC18"/>
+				<include name="PaymentProcessing_PR_WaiveFeeAndCreditNote_TC28"/>
+				<include name="PaymentProcessing_PR_OriginalFeeWaived_TC38"/>
+			  
+			   </methods>
+			 </class>
+			  <class name="testCases.Refund">
+			  <methods>
+			  <include name="Refund_VerifyRefundAddressReverseAmountAccountNumberPrimaryBillingAddress_004"/>
+				<include name="Refund_TransmissionOfTerminatedAccountsOverageToAutoRefund_013"/>
+				<include name="Refund_TransmissionOfTerminatedAccountsOverageToAutoRefund_013_01"/>
+				<include name="Refund_CreatesBulkAutomaticRefundRequests_027"/>
+				<include name="Refund_KSIOPToStoreRefundResultsFromERPAndStatusOfRefundCashFlow_031"/>
+				<include name="Refund_KSIOPToConfigureHoldDateForRefund_026_N"/>
+				<include name="Refund_SearchCriteriaForSearchinRefundSuspense_003"/>
+				<include name="Refund_VerifyThatReverseReasonIsSelectedForRefund_007"/>
+				<include name="Refund_VerifyThatKSIOPIsAbleToSelectAndCreateAutomaticRefundItems_008"/>
+				<include name="Refund_VerifyThatKSIOPIsAbleToCreateBulkAutomaticRefundRequests_027_01"/>
+							  
+			    </methods>
+			 </class>
+			   <class name="testCases.Auction">
+			  <methods>
+			  <include name="Auction_PhysicalAuctionSalefile_052_1"/>
+					<include name="Auction_ValidateArbitrationProcess_052_2"/>
+					<include name="Auction_ReCalculategainORLoss_51"/>
+					<include name="Auction_DoubleReconcillationCRM_53"/>
+					<include name="Auction_AuctionAndSalefileProcessed_069"/>
+					<include name="Auction_PhysicalAuctionCreated_070"/>
+					<include name="Auction_AuctionArbitrationSR_054"/>
+					<include name="Auction_LeasePostedToSuspense_01"/>
+					<include name="Auction_AccountStatusPayoff_02"/>
+								  
+			   </methods>
+			 </class>
+			 <class name="testCases.PayoffQuotation">
+			  <methods>
+				<include name="PayoffQuotation_ValidateClientTotalAmount_01"/>
+				<include name="PayoffQuotation_ValidateDealerTotalAmount_02"/>
+				<include name="PayoffQuotation_ValidateLeaseClientTotalAmount_04"/>
+				<include name="PayoffQuotation_ValidateLeaseClientTotalAmount_05"/>
+				<include name="PayoffQuotation_ValidateLeaseInsuranceTotalAmount_06"/>
+				<include name="PayoffQuotation_ValidateLeasePastMaturityAccount_12"/>
+				<include name="PayoffQuotation_ValidateLeaseCOStateAccount_13"/>
+				<include name="PayoffQuotation_ValidateLeaseDCStateAccount_14"/>
+				<include name="PayoffQuotation_ValidateLeaseFLStateAccount_15"/>
+				<include name="PayoffQuotation_ValidateLeaseHIStateAccount_16"/>
+				<include name="PayoffQuotation_ValidateLeaseINStateAccount_17"/>
+				<include name="PayoffQuotation_ValidateLeasePAStateAccount_18"/>
+				<include name="PayoffQuotation_ValidateLeaseSCStateAccount_19"/>
+				<include name="PayoffQuotation_ValidateLeaseSDStateAccount_20"/>
+				<include name="PayoffQuotation_ValidateDealerCOStateTotalAmount_21"/>
+				<include name="PayoffQuotation_ValidateLeaseDCStateTotalAmount_22"/>
+				<include name="PayoffQuotation_ValidateLeaseFLStateTotalAmount_23"/>
+				<include name="PayoffQuotation_ValidateLeaseHIStateTotalAmount_24"/>
+				<include name="PayoffQuotation_ValidateLeaseINStateTotalAmount_25"/>
+				<include name="PayoffQuotation_ValidateLeasePAStateTotalAmount_26"/>
+				<include name="PayoffQuotation_ValidateLeaseSCStateTotalAmount_27"/>
+				<include name="PayoffQuotation_ValidateLeaseSDStateTotalAmount_28"/>
+				<include name="PayoffQuotation_ValidateLeaseCOStateTotalAmount_29"/>
+				<include name="PayoffQuotation_ValidateLeaseInsuranceDCStateTotalAmount_30"/>
+				<include name="PayoffQuotation_ValidateLeaseInsuranceFLStateTotalAmount_31"/>
+				<include name="PayoffQuotation_ValidateLeaseInsuranceHIStateTotalAmount_32"/>
+				<include name="PayoffQuotation_ValidateLeaseInsuranceINStateTotalAmount_33"/>
+				<include name="PayoffQuotation_ValidateLeaseInsurancePAStateTotalAmount_34"/>
+				<include name="PayoffQuotation_ValidateLeaseInsuranceSCStateTotalAmount_35"/>
+				<include name="PayoffQuotation_ValidateLeaseInsuranceSDStateTotalAmount_36"/>
+				<include name="PayoffQuotation_ValidateRetailCOStateTotalAmount_37"/>
+				<include name="PayoffQuotation_ValidateRetailDCStateTotalAmount_38"/>
+				<include name="PayoffQuotation_ValidateRetailFLStateTotalAmount_39"/>
+				<include name="PayoffQuotation_ValidateRetailHIStateTotalAmount_40"/>
+				<include name="PayoffQuotation_ValidateRetailINStateTotalAmount_41"/>
+				<include name="PayoffQuotation_ValidateRetailPAStateTotalAmount_42"/>
+				<include name="PayoffQuotation_ValidateRetailSCStateTotalAmount_43"/>
+				<include name="PayoffQuotation_ValidateRetailSDStateTotalAmount_44"/>
+				<include name="PayoffQuotation_ValidateBKStateAccountTotalAmount_45"/>
+				<include name="PayoffQuotation_ValidateFraudStateAccountTotalAmount_46"/>
+				<include name="PayoffQuotation_ValidateTerminateConditionAccountTotalAmount_47"/>
+				<include name="PayoffQuotation_ValidateChargedOffConditionAccountTotalAmount_48"/>
+				<include name="PayoffQuotation_ValidateInsuranceAccountTotalAmount_49"/>
+				<include name="PayoffQuotation_ValidateInsuranceAccountRedemptionQuoteAmount_50"/>
+				<include name="PayoffQuotation_ValidateInsuranceAccountReinstatementAmount_51"/>
+				<include name="PayoffQuotation_validateCustomerRequestPayoffQuoteHistory_52"/>
+				<include name="PayoffQuotation_validateDelaerRequestPayoffQuoteHistory_53"/>
+				<include name="PayoffQuotation_validateCustomerRequestPayoffQuoteHistory_62"/>
+				<include name="PayoffQuotation_validateCustomerRequestBuyoutQuoteHistory_63"/>
+			 </methods>
+			 </class> 
+			  <class name="testCases.VehicleTurnInGrounding">
+			  <methods>
+			  <include name="VehicleTurnInGrounding_VerifyVehicleIsMovedToInventory_027"/>
+				<include name="VehicleTurnInGrounding_VerifyGroundingOrAssetReturnDate_028"/>
+				<include name="VehicleTurnInGrounding_VerifyGroundingFlagIsSet_029"/>
+				<include name="VehicleTurnInGrounding_VerifyGroundingListHistoryDetails_030"/>
+				<include name="VehicleTurnInGrounding_VerifyGroundingListHistoryDetails_031"/>
+				<include name="VehicleTurnInGrounding_VerifyGroundingListHistoryDetails_038"/>
+				<include name="VehicleTurnInGrounding_VerifyVehicleGroundingDetails_058"/>
+				<include name="VehicleTurnInGrounding_VerifyDealerContactSection_059"/>
+				<include name="VehicleTurnInGrounding_VerifyDealerInformationSection_060"/>
+				<include name="VehicleTurnInGrounding_VerifyVehicleInformationSection_062"/>
+			  </methods>
+			 </class> 
+			 <class name="testCases.Repossession">
+			  <methods>
+			 <include name="Repossession_Peripheral_LienReason_001"/>
+				<include name="Repossession_Peripheral_BKReason_002"/>
+				<include name="Repossession_Peripheral_ActivePTP_025"/>
+				<include name="Repossession_Peripheral_RetailRTC_026"/>
+				<include name="Repossession_Peripheral_VerifyNOI_029"/>
+				<include name="Repossession_Peripheral_VerifyNOICAStateAccount_030"/>
+				<include name="Repossession_Peripheral_GenerateNOICAStateAccount_031"/>
+			   </methods>
+			 </class> 
+			  <class name="testCases.Recovery">
+			  <methods>
+			 <include name="Recovery_verifyStepFieldValue_SettledInFull_067"/>
+				<include name="Recovery_verifyStepFieldValue_PaidInFull_096"/>
+				<include name="Recovery_verifyStepFieldValue_Dormant_098"/>
+				<include name="Recovery_KSIOPToSendThe1099CFormToTheCustomer_100"/>
+				<include name="Recovery_KSIOPToZeroOuTheAccountBalance_103"/>
+				<include name="Recovery_VerifyCRMSendsTheRepoAConditionToKSIOP_147"/>
+			 </methods>
+			 </class> 
+			  <class name="testCases.ExternalSR">
+			  <methods>
+			  <include name="ExternalSR_VerifyRetailBackOfficeAgentRequested_Interest_PaymentLetter_002"/>
+			  
+			  </methods>
+			 </class> 
+			   <class name="testCases.CustomerInformationChange">
+			  <methods>
+				<include name="CustomerInformationChange_VerifyKSIOPAddressChange_UsingCurrentAndFutureDate_058"/>
+				<include name="CustomerInformationChange_VerifyTaxAmount_WhenGarageAddressIsChanged_059"/>
+				<include name="CustomerInformationChange_VerifyDataStewardAndModfyData_071"/>
+				<include name="CustomerInformationChange_CRM_customerInformationintegrationKSIOP_008"/>
+				<include name="CustomerInformationChange_CRM_customerInformationintegrationKSIOP_009"/>
+				<include name="CustomerInformationChange_CRM_customerInformationintegrationKSIOP_010"/>
+				<include name="CustomerInformationChange_CRM_customerInformationintegrationKSIOP_011"/>
+				<include name="CustomerInformationChange_CRM_customerInformationintegrationKSIOP_012"/>
+				<include name="CustomerInformationChange_CRM_customerInformationintegrationKSIOP_013_N"/>
+				<include name="CustomerInformationChange_CRM_customerInformationintegrationKSIOP_014"/>
+				<include name="CustomerInformationChange_CRM_customerInformationintegrationKSIOP_015"/>
+				<include name="CustomerInformationChange_CRM_customerInformationintegrationKSIOP_016"/>
+				<include name="CustomerInformationChange_CRM_customerInformationintegrationKSIOP_017"/>
+				<include name="CustomerInformationChange_CRM_customerInformationintegrationKSIOP_018"/>
+				<include name="CustomerInformationChange_CRM_customerInformationintegrationKSIOP_019"/>
+				<include name="CustomerInformationChange_CRM_customerInformationintegrationKSIOP_020"/>
+				<include name="CustomerInformationChange_CRM_customerInformationintegrationKSIOP_021"/>
+				<include name="CustomerInformationChange_CRM_customerInformationintegrationKSIOP_022"/>
+				<include name="CustomerInformationChange_CRM_customerInformationintegrationKSIOP_023"/>
+				<include name="CustomerInformationChange_CRM_customerInformationintegrationKSIOP_024_N"/>
+				<include name="CustomerInformationChange_CRM_customerInformationintegrationKSIOP_025"/>
+				<include name="CustomerInformationChange_CRM_customerInformationintegrationKSIOP_026"/>
+				<include name="CustomerInformationChange_CRM_customerInformationCRMScreenOverride_027"/>
+				<include name="CustomerInformationChange_CRM_customerInformationintegrationKSIOP_039"/>
+				<include name="CustomerInformationChange_CRM_customerInformationintegrationKSIOP_040"/>
+				<include name="CustomerInformationChange_CRM_customerNameChangeintegrationKSIOP_098"/>
+				<include name="CustomerInformationChange_CRM_customerNameChangeintegrationKSIOP_100"/>
+				
+				  </methods>
+			 </class> 
+			 
+		</classes>
+	</test>
+</suite>
