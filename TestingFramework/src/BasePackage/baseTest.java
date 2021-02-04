@@ -53,7 +53,7 @@ public class baseTest {
 		System.setProperty("org.uncommons.reportng.escape-output", "false");
 		location = System.getProperty("user.home") + "\\Documents\\Results\\Reports\\" + getCurrentTime();
 		SClocation = System.getProperty("user.home") + "\\Documents\\Results\\Screenshots\\" + getCurrentTime();
-		p = new PropertiesConfiguration(System.getProperty("user.dir") + "\\Properties\\Config.properties");
+		p = new PropertiesConfiguration(System.getProperty("user.dir") + "\\Properties\\Paths.properties");
 		p.setProperty("OutPutlocation", location);
 		p.setProperty("SCOutPutlocation", SClocation);
 		p.save();
