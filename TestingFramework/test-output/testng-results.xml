@@ -1,54 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results skipped="0" failed="2" total="2" passed="0">
   <reporter-output>
-    <line>
-      <![CDATA[Opend URL<a style='color:#32cd32;float: right'  target='_blank' href='C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_1\Opened URL.JPEG'>ScreenShot</a>]]>
-    </line>
-    <line>
-      <![CDATA[Entered Phone Number<a style='color:#32cd32;float: right'  target='_blank' href='C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_1\Entered Phone Number.JPEG'>ScreenShot</a>]]>
-    </line>
-    <line>
-      <![CDATA[Entered Password<a style='color:#32cd32;float: right'  target='_blank' href='C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_1\Entered Password.JPEG'>ScreenShot</a>]]>
-    </line>
-    <line>
-      <![CDATA[clicked on Submit Button<a style='color:#32cd32;float: right'  target='_blank' href='C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_1\clicked on Submit Button.JPEG'>ScreenShot</a>]]>
-    </line>
-    <line>
-      <![CDATA[waited for 10sec for element<br>Expected condition failed: waiting for element to be clickable: By.xpath: //button[@class='_2AkmmA _29YdH8'] (tried for 10 second(s) with 500 milliseconds interval)<a data-featherlight = 'C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_1\Unable to locate element.JPEG' href='C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_1\Unable to locate element.JPEG' target='_blank' style='color:#FFFFFF;float: right'>ScreenShot</a>]]>
-    </line>
-    <line>
-      <![CDATA[Opend URL<a style='color:#32cd32;float: right'  target='_blank' href='C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_2\Opened URL.JPEG'>ScreenShot</a>]]>
-    </line>
-    <line>
-      <![CDATA[Entered Phone Number<a style='color:#32cd32;float: right'  target='_blank' href='C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_2\Entered Phone Number.JPEG'>ScreenShot</a>]]>
-    </line>
-    <line>
-      <![CDATA[Entered Password<a style='color:#32cd32;float: right'  target='_blank' href='C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_2\Entered Password.JPEG'>ScreenShot</a>]]>
-    </line>
-    <line>
-      <![CDATA[clicked on Submit Button<a style='color:#32cd32;float: right'  target='_blank' href='C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_2\clicked on Submit Button.JPEG'>ScreenShot</a>]]>
-    </line>
-    <line>
-      <![CDATA[waited for 10sec for element<br>Expected condition failed: waiting for element to be clickable: By.xpath: //button[@class='_2AkmmA _29YdH8'] (tried for 10 second(s) with 500 milliseconds interval)<a data-featherlight = 'C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_2\Unable to locate element.JPEG' href='C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_2\Unable to locate element.JPEG' target='_blank' style='color:#FFFFFF;float: right'>ScreenShot</a>]]>
-    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="61835" started-at="2020-12-31T16:29:08Z" finished-at="2020-12-31T16:30:10Z">
+  <suite name="Default suite" duration-ms="53457" started-at="2021-02-04T16:14:09Z" finished-at="2021-02-04T16:15:02Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="61835" started-at="2020-12-31T16:29:08Z" finished-at="2020-12-31T16:30:10Z">
+    <test name="Default test" duration-ms="53457" started-at="2021-02-04T16:14:09Z" finished-at="2021-02-04T16:15:02Z">
       <class name="TestCases.SampleTestCase">
-        <test-method status="PASS" signature="setPath(org.testng.ITestContext)[pri:0, instance:TestCases.SampleTestCase@6e06451e]" name="setPath" is-config="true" duration-ms="1524" started-at="2020-12-31T21:59:06Z" finished-at="2020-12-31T21:59:08Z">
+        <test-method status="PASS" signature="setPath(org.testng.ITestContext)[pri:0, instance:TestCases.SampleTestCase@6e06451e]" name="setPath" is-config="true" duration-ms="2759" started-at="2021-02-04T21:44:06Z" finished-at="2021-02-04T21:44:09Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@6a937336]]>
+                <![CDATA[org.testng.TestRunner@6ec7bce0]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setPath -->
-        <test-method status="PASS" signature="onStart(java.lang.reflect.Method)[pri:0, instance:TestCases.SampleTestCase@6e06451e]" name="onStart" is-config="true" duration-ms="8175" started-at="2020-12-31T21:59:09Z" finished-at="2020-12-31T21:59:17Z">
+        <test-method status="PASS" signature="onStart(java.lang.reflect.Method)[pri:0, instance:TestCases.SampleTestCase@6e06451e]" name="onStart" is-config="true" duration-ms="9592" started-at="2021-02-04T21:44:11Z" finished-at="2021-02-04T21:44:21Z">
           <params>
             <param index="0">
               <value>
@@ -59,7 +29,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- onStart -->
-        <test-method status="FAIL" signature="SearchData_TestCase1(java.util.Map)[pri:0, instance:TestCases.SampleTestCase@6e06451e]" name="SearchData_TestCase1" duration-ms="22662" started-at="2020-12-31T21:59:17Z" data-provider="TestData" finished-at="2020-12-31T21:59:40Z">
+        <test-method status="FAIL" signature="SearchData_TestCase1(java.util.Map)[pri:0, instance:TestCases.SampleTestCase@6e06451e]" name="SearchData_TestCase1" duration-ms="17399" started-at="2021-02-04T21:44:21Z" data-provider="TestData" finished-at="2021-02-04T21:44:38Z">
           <params>
             <param index="0">
               <value>
@@ -106,40 +76,25 @@
             </full-stacktrace>
           </exception> <!-- CustomException.MyException -->
           <reporter-output>
-            <line>
-              <![CDATA[Opend URL<a style='color:#32cd32;float: right'  target='_blank' href='C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_1\Opened URL.JPEG'>ScreenShot</a>]]>
-            </line>
-            <line>
-              <![CDATA[Entered Phone Number<a style='color:#32cd32;float: right'  target='_blank' href='C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_1\Entered Phone Number.JPEG'>ScreenShot</a>]]>
-            </line>
-            <line>
-              <![CDATA[Entered Password<a style='color:#32cd32;float: right'  target='_blank' href='C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_1\Entered Password.JPEG'>ScreenShot</a>]]>
-            </line>
-            <line>
-              <![CDATA[clicked on Submit Button<a style='color:#32cd32;float: right'  target='_blank' href='C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_1\clicked on Submit Button.JPEG'>ScreenShot</a>]]>
-            </line>
-            <line>
-              <![CDATA[waited for 10sec for element<br>Expected condition failed: waiting for element to be clickable: By.xpath: //button[@class='_2AkmmA _29YdH8'] (tried for 10 second(s) with 500 milliseconds interval)<a data-featherlight = 'C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_1\Unable to locate element.JPEG' href='C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_1\Unable to locate element.JPEG' target='_blank' style='color:#FFFFFF;float: right'>ScreenShot</a>]]>
-            </line>
           </reporter-output>
         </test-method> <!-- SearchData_TestCase1 -->
-        <test-method status="PASS" signature="CloseBrowser(org.testng.ITestResult, org.testng.ITestContext)[pri:0, instance:TestCases.SampleTestCase@6e06451e]" name="CloseBrowser" is-config="true" duration-ms="973" started-at="2020-12-31T21:59:40Z" finished-at="2020-12-31T21:59:41Z">
+        <test-method status="PASS" signature="CloseBrowser(org.testng.ITestResult, org.testng.ITestContext)[pri:0, instance:TestCases.SampleTestCase@6e06451e]" name="CloseBrowser" is-config="true" duration-ms="1224" started-at="2021-02-04T21:44:38Z" finished-at="2021-02-04T21:44:39Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=SearchData_TestCase1 status=FAILURE method=SampleTestCase.SearchData_TestCase1(java.util.Map)[pri:0, instance:TestCases.SampleTestCase@6e06451e] output=Opend URL<a style='color:#32cd32;float: right'  target='_blank' href='C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_1\Opened URL.JPEG'>ScreenShot</a>]]]>
+                <![CDATA[[TestResult name=SearchData_TestCase1 status=FAILURE method=SampleTestCase.SearchData_TestCase1(java.util.Map)[pri:0, instance:TestCases.SampleTestCase@6e06451e] output={null}]]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@6a937336]]>
+                <![CDATA[org.testng.TestRunner@6ec7bce0]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CloseBrowser -->
-        <test-method status="PASS" signature="onStart(java.lang.reflect.Method)[pri:0, instance:TestCases.SampleTestCase@6e06451e]" name="onStart" is-config="true" duration-ms="5892" started-at="2020-12-31T21:59:41Z" finished-at="2020-12-31T21:59:47Z">
+        <test-method status="PASS" signature="onStart(java.lang.reflect.Method)[pri:0, instance:TestCases.SampleTestCase@6e06451e]" name="onStart" is-config="true" duration-ms="6444" started-at="2021-02-04T21:44:39Z" finished-at="2021-02-04T21:44:46Z">
           <params>
             <param index="0">
               <value>
@@ -150,7 +105,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- onStart -->
-        <test-method status="FAIL" signature="SearchData_TestCase1(java.util.Map)[pri:0, instance:TestCases.SampleTestCase@6e06451e]" name="SearchData_TestCase1" duration-ms="22729" started-at="2020-12-31T21:59:47Z" data-provider="TestData" finished-at="2020-12-31T22:00:09Z">
+        <test-method status="FAIL" signature="SearchData_TestCase1(java.util.Map)[pri:0, instance:TestCases.SampleTestCase@6e06451e]" name="SearchData_TestCase1" duration-ms="16151" started-at="2021-02-04T21:44:46Z" data-provider="TestData" finished-at="2021-02-04T21:45:02Z">
           <params>
             <param index="0">
               <value>
@@ -197,40 +152,25 @@
             </full-stacktrace>
           </exception> <!-- CustomException.MyException -->
           <reporter-output>
-            <line>
-              <![CDATA[Opend URL<a style='color:#32cd32;float: right'  target='_blank' href='C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_2\Opened URL.JPEG'>ScreenShot</a>]]>
-            </line>
-            <line>
-              <![CDATA[Entered Phone Number<a style='color:#32cd32;float: right'  target='_blank' href='C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_2\Entered Phone Number.JPEG'>ScreenShot</a>]]>
-            </line>
-            <line>
-              <![CDATA[Entered Password<a style='color:#32cd32;float: right'  target='_blank' href='C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_2\Entered Password.JPEG'>ScreenShot</a>]]>
-            </line>
-            <line>
-              <![CDATA[clicked on Submit Button<a style='color:#32cd32;float: right'  target='_blank' href='C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_2\clicked on Submit Button.JPEG'>ScreenShot</a>]]>
-            </line>
-            <line>
-              <![CDATA[waited for 10sec for element<br>Expected condition failed: waiting for element to be clickable: By.xpath: //button[@class='_2AkmmA _29YdH8'] (tried for 10 second(s) with 500 milliseconds interval)<a data-featherlight = 'C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_2\Unable to locate element.JPEG' href='C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_2\Unable to locate element.JPEG' target='_blank' style='color:#FFFFFF;float: right'>ScreenShot</a>]]>
-            </line>
           </reporter-output>
         </test-method> <!-- SearchData_TestCase1 -->
-        <test-method status="PASS" signature="CloseBrowser(org.testng.ITestResult, org.testng.ITestContext)[pri:0, instance:TestCases.SampleTestCase@6e06451e]" name="CloseBrowser" is-config="true" duration-ms="67" started-at="2020-12-31T22:00:09Z" finished-at="2020-12-31T22:00:10Z">
+        <test-method status="PASS" signature="CloseBrowser(org.testng.ITestResult, org.testng.ITestContext)[pri:0, instance:TestCases.SampleTestCase@6e06451e]" name="CloseBrowser" is-config="true" duration-ms="229" started-at="2021-02-04T21:45:02Z" finished-at="2021-02-04T21:45:02Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=SearchData_TestCase1 status=FAILURE method=SampleTestCase.SearchData_TestCase1(java.util.Map)[pri:0, instance:TestCases.SampleTestCase@6e06451e] output=Opend URL<a style='color:#32cd32;float: right'  target='_blank' href='C:\Users\aravi\Documents\Results\Screenshots\2020-12-31_21-59-06\SearchData_TestCase1_2\Opened URL.JPEG'>ScreenShot</a>]]]>
+                <![CDATA[[TestResult name=SearchData_TestCase1 status=FAILURE method=SampleTestCase.SearchData_TestCase1(java.util.Map)[pri:0, instance:TestCases.SampleTestCase@6e06451e] output={null}]]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@6a937336]]>
+                <![CDATA[org.testng.TestRunner@6ec7bce0]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CloseBrowser -->
-        <test-method status="PASS" signature="getResult()[pri:0, instance:TestCases.SampleTestCase@6e06451e]" name="getResult" is-config="true" duration-ms="1614" started-at="2020-12-31T22:00:10Z" finished-at="2020-12-31T22:00:11Z">
+        <test-method status="PASS" signature="getResult()[pri:0, instance:TestCases.SampleTestCase@6e06451e]" name="getResult" is-config="true" duration-ms="1889" started-at="2021-02-04T21:45:02Z" finished-at="2021-02-04T21:45:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
