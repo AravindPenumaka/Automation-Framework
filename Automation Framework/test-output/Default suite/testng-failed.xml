@@ -5,11 +5,9 @@
     <classes>
       <class name="TestCases.DemoElements">
         <methods>
-          <include name="onMethodEnd"/>
           <include name="onStart"/>
-          <include name="DemoElements_demoElementTestcase" invocation-numbers="0"/>
+          <include name="DemoElements_demoElementTestcase"/>
           <include name="onFinish"/>
-          <include name="onMethodStrat"/>
         </methods>
       </class> <!-- TestCases.DemoElements -->
     </classes>
