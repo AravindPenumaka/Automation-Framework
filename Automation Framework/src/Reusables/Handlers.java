@@ -23,6 +23,7 @@ public class Handlers extends Reusables.Keywords {
 	public int type(By ele, String TextValue) {
 
 		try {
+			driver.findElement(ele).clear();
 			driver.findElement(ele).sendKeys(TextValue);
 			return 0;
 		} catch (NoSuchElementException | TimeoutException e) {

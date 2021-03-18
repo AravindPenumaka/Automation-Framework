@@ -91,12 +91,11 @@ public class getExcelData {
 	 */
 	public String getURL(String URL) throws EncryptedDocumentException, IOException {
 		
-		HashMap<String, String> UserNameandPass = new HashMap<String, String>();
 		FileInputStream fs = new FileInputStream(file);
 		Workbook wb = WorkbookFactory.create(fs);
 		Sheet sheet = wb.getSheet("URL");
 		for (int i = 1; i <= sheet.getPhysicalNumberOfRows(); i++) {
-			for (int j = 0; j < sheet.getRow(0).getPhysicalNumberOfCells(); j++) {
+			for (int j = 0; j <= sheet.getRow(0).getPhysicalNumberOfCells(); j++) {
 				if (sheet.getRow(j).getCell(0).getStringCellValue().equals(URL)) {
 					return sheet.getRow(j).getCell(1).getStringCellValue();
 				}

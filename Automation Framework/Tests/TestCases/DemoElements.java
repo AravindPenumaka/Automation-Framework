@@ -15,7 +15,7 @@ public class DemoElements extends Reusables.Keywords{
 	public void DemoElements_demoElementTestcase(Map<Object,Object> odata) throws Exception{
 		
 		HashMap<String, String> data = exceldata.getData(odata);
-		driver.get("https://www.automationtestinginsider.com/2019/08/textarea-textarea-element-defines-multi.html");
+		openPage("DemoElements");
 		page.demopage.demoElementInteraction(data);
 		
 		

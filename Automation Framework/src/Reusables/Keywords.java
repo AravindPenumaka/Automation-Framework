@@ -1,20 +1,18 @@
 package Reusables;
 
-import java.time.Duration;
+import java.io.IOException;
 import java.util.List;
 import java.util.NoSuchElementException;
 import BasePack.Screenshot;
 import BasePack.TestExceptions;
 import ExcelUtility.getExcelData;
+
+import org.apache.poi.EncryptedDocumentException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.NoAlertPresentException;
-import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.TimeoutException;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.Status;
@@ -28,6 +26,12 @@ public class Keywords extends BasePack.BaseClass {
 	public String status = "";
 	public int opstatus = 0;
 	static String parentNode = "";
+	
+	public void openPage(String ApplicationName) throws EncryptedDocumentException, IOException{
+		
+		driver.get(new getExcelData().getURL(ApplicationName));
+		logger.log(Status.PASS, "Entered URL With : <a target='_blank' style='color:aqua'>" + new getExcelData().getURL(ApplicationName) +"</a>");
+	}
 
 	/***
 	 * @description opens URL
