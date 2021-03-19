@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="31501" started-at="2021-03-18T14:38:47Z" finished-at="2021-03-18T14:39:18Z">
+  <suite name="Default suite" duration-ms="42874" started-at="2021-03-19T13:42:19Z" finished-at="2021-03-19T13:43:02Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="31501" started-at="2021-03-18T14:38:47Z" finished-at="2021-03-18T14:39:18Z">
+    <test name="Default test" duration-ms="42874" started-at="2021-03-19T13:42:19Z" finished-at="2021-03-19T13:43:02Z">
       <class name="TestCases.DemoElements">
-        <test-method status="PASS" signature="onStart()[pri:0, instance:TestCases.DemoElements@5649fd9b]" name="onStart" is-config="true" duration-ms="777" started-at="2021-03-18T14:38:46Z" finished-at="2021-03-18T14:38:47Z">
+        <test-method status="PASS" signature="onStart()[pri:0, instance:TestCases.DemoElements@29ca901e]" name="onStart" is-config="true" duration-ms="1810" started-at="2021-03-19T13:42:18Z" finished-at="2021-03-19T13:42:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- onStart -->
-        <test-method status="PASS" signature="onMethodStrat(java.lang.reflect.Method)[pri:0, instance:TestCases.DemoElements@5649fd9b]" name="onMethodStrat" is-config="true" duration-ms="2124" started-at="2021-03-18T14:38:47Z" finished-at="2021-03-18T14:38:49Z">
+        <test-method status="PASS" signature="onMethodStrat(java.lang.reflect.Method)[pri:0, instance:TestCases.DemoElements@29ca901e]" name="onMethodStrat" is-config="true" duration-ms="4349" started-at="2021-03-19T13:42:20Z" finished-at="2021-03-19T13:42:24Z">
           <params>
             <param index="0">
               <value>
@@ -22,7 +22,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- onMethodStrat -->
-        <test-method status="PASS" signature="DemoElements_demoElementTestcase(java.util.Map)[pri:0, instance:TestCases.DemoElements@5649fd9b]" name="DemoElements_demoElementTestcase" duration-ms="29086" started-at="2021-03-18T14:38:49Z" data-provider="TestData" finished-at="2021-03-18T14:39:18Z">
+        <test-method status="PASS" signature="DemoElements_demoElementTestcase(java.util.Map)[pri:0, instance:TestCases.DemoElements@29ca901e]" name="DemoElements_demoElementTestcase" duration-ms="38106" started-at="2021-03-19T13:42:24Z" data-provider="TestData" finished-at="2021-03-19T13:43:02Z">
           <params>
             <param index="0">
               <value>
@@ -33,11 +33,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DemoElements_demoElementTestcase -->
-        <test-method status="PASS" signature="onMethodEnd()[pri:0, instance:TestCases.DemoElements@5649fd9b]" name="onMethodEnd" is-config="true" duration-ms="215" started-at="2021-03-18T14:39:18Z" finished-at="2021-03-18T14:39:18Z">
+        <test-method status="PASS" signature="onMethodEnd()[pri:0, instance:TestCases.DemoElements@29ca901e]" name="onMethodEnd" is-config="true" duration-ms="295" started-at="2021-03-19T13:43:02Z" finished-at="2021-03-19T13:43:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- onMethodEnd -->
-        <test-method status="PASS" signature="onFinish()[pri:0, instance:TestCases.DemoElements@5649fd9b]" name="onFinish" is-config="true" duration-ms="1085" started-at="2021-03-18T14:39:18Z" finished-at="2021-03-18T14:39:19Z">
+        <test-method status="PASS" signature="onFinish()[pri:0, instance:TestCases.DemoElements@29ca901e]" name="onFinish" is-config="true" duration-ms="2257" started-at="2021-03-19T13:43:02Z" finished-at="2021-03-19T13:43:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- onFinish -->

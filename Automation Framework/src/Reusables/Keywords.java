@@ -1,5 +1,6 @@
 package Reusables;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -16,7 +17,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
 public class Keywords extends BasePack.BaseClass {
@@ -26,11 +27,12 @@ public class Keywords extends BasePack.BaseClass {
 	public String status = "";
 	public int opstatus = 0;
 	static String parentNode = "";
-	
-	public void openPage(String ApplicationName) throws EncryptedDocumentException, IOException{
-		
+
+	public void openPage(String ApplicationName) throws EncryptedDocumentException, IOException {
+
 		driver.get(new getExcelData().getURL(ApplicationName));
-		logger.log(Status.PASS, "Entered URL With : <a target='_blank' style='color:aqua'>" + new getExcelData().getURL(ApplicationName) +"</a>");
+		logger.log(Status.PASS, "Entered URL With : <a target='_blank' style='color:aqua'>"
+				+ new getExcelData().getURL(ApplicationName) + "</a>");
 	}
 
 	/***
@@ -128,7 +130,7 @@ public class Keywords extends BasePack.BaseClass {
 			String FailMsg = "Failed to Select " + ValuetobeSelected + " From " + msg;
 			switch (opstatus) {
 			case 0:
-				status = "Pass" + "$" + "Entered text " + ValuetobeSelected + " From " + msg + "$"
+				status = "Pass" + "$" + "Selected " + ValuetobeSelected + " From " + msg + "$"
 						+ sc.getScreenshot(PassMsg, loc);
 				break;
 			case 1:
@@ -144,6 +146,42 @@ public class Keywords extends BasePack.BaseClass {
 					+ " Unable to Enter text in  element-> " + loc.toString() + "$" + "";
 		}
 		return status;
+	}
+
+	/***
+	 * @description select from drop down using action class
+	 * @param loc
+	 * @param ValuetobeSelected
+	 * @param msg
+	 * @return
+	 */
+	public String actionSelect(By loc, String ValuetobeSelected, String msg) {
+
+		try {
+			wait(loc);
+			Handlers button = new Handlers();
+			opstatus = button.actionSelect(loc, ValuetobeSelected);
+			String PassMsg = "Select " + ValuetobeSelected + " From " + msg;
+			String FailMsg = "Failed to Select " + ValuetobeSelected + " From " + msg;
+			switch (opstatus) {
+			case 0:
+				status = "Pass" + "$" + "Selected " + ValuetobeSelected + " From " + msg + "$"
+						+ sc.getScreenshot(PassMsg, loc);
+				break;
+			case 1:
+				status = "Fail" + "$" + "Unable to locate element with text " + ValuetobeSelected + "-> "
+						+ loc.toString() + "$" + sc.getScreenshot(FailMsg, loc);
+				break;
+			case 2:
+				status = "Fail" + "$" + "Generic exception Unable to select from dropdown -> " + loc.toString() + "$"
+						+ sc.getScreenshot(FailMsg, loc);
+			}
+		} catch (Exception e) {
+			status = "Fail" + "$" + "Exception:" + e.getClass().getCanonicalName()
+					+ " Unable to Enter text in  element-> " + loc.toString() + "$" + "";
+		}
+		return status;
+
 	}
 
 	/***
@@ -192,6 +230,24 @@ public class Keywords extends BasePack.BaseClass {
 			status = "Fail" + "$" + "Unable to locate element  element-> " + loc.toString() + "$" + "";
 		}
 		return status;
+	}
+
+	/***
+	 * @description returns boolean value if element present
+	 * @param loc
+	 * @return
+	 */
+	public boolean elementPresent(By loc) {
+
+		try {
+			if (driver.findElement(loc).isDisplayed()) {
+				return true;
+			} else {
+				return false;
+			}
+		} catch (Exception e) {
+			return false;
+		}
 	}
 
 	/***
@@ -342,12 +398,14 @@ public class Keywords extends BasePack.BaseClass {
 
 	@SuppressWarnings("deprecation")
 	public void initializeReport() {
-		reporter = new ExtentHtmlReporter(extentreportLocation);
-		reporter.config().setTheme(Theme.DARK);
-		reporter.config().setDocumentTitle("Automation Framework");
-		reporter.config().setReportName("Automation Report");
 		extent = new ExtentReports();
-		extent.attachReporter(reporter);
+		spark = new ExtentSparkReporter(extentreportLocation);
+		//reporter = new ExtentHtmlReporter(extentreportLocation);
+		spark.config().setTheme(Theme.DARK);
+		spark.config().setDocumentTitle("Automation Framework");
+		spark.config().setReportName("Automation Report");
+		//extent = new ExtentReports();
+		extent.attachReporter(spark);
 	}
 
 	/***
@@ -375,10 +433,10 @@ public class Keywords extends BasePack.BaseClass {
 			if (new ExcelUtility.getExcelData().getConfiguration("Screenshot").equalsIgnoreCase("yes")) {
 				if (StepStatus.equalsIgnoreCase("pass")) {
 					child.log(Status.PASS, StepData + "<a style='color:#32cd32;float: right'  data-featherlight = '"
-							+ screenshotPath + "' href='" + scpath + "'>ScreenShot</a>");
+							+ screenshotPath + "' href='" + screenshotPath + "'>ScreenShot</a>");
 				} else if (StepStatus.equalsIgnoreCase("fail")) {
 					child.log(Status.FAIL, StepData + "<a style='color:red;float: right'  data-featherlight = '"
-							+ screenshotPath + "' href='" + scpath + "'>ScreenShot</a>");
+							+ screenshotPath + "' href='" + screenshotPath + "'>ScreenShot</a>");
 					failflag = 1;
 				}
 			} else {

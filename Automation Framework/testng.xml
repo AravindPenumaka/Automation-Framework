@@ -8,6 +8,11 @@
 					<include name="DemoElements_demoElementTestcase" />
 				</methods>
 			</class>
+			<class name="TestCases.HRM">
+				<methods>
+					<include name="HRM_ApplyLeave" />
+				</methods>
+			</class>
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
