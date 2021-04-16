@@ -39,11 +39,7 @@ public class Legal extends BaseTestSuite {
 	public void Legal_ConditionType_Judgement_003() throws Throwable {
 		
 		HashMap<String, String> data = basePageData.fetchInputData("Legal",getMethod());
-		appFunc.login_func.open_KSIOPurl();
-		appFunc.login_func.fillLoginKSIOP("Login", "Ksiop_Login");
-		appFunc.homeScreen_func.globalSearchDetails(data);
-		appFunc.searchAccCond_func.verifyAccountCondition(data);
-		appFunc.searchAccCond_func.verifyAccountCondition_EndDate(data);
+		appFunc.login_func.LoginURL();
 	}
 
 	@Test

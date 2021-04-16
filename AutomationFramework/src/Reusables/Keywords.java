@@ -1,5 +1,7 @@
 package Reusables;
 
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
@@ -7,7 +9,6 @@ import java.util.NoSuchElementException;
 import BasePack.Screenshot;
 import BasePack.TestExceptions;
 import ExcelUtility.getExcelData;
-
 import org.apache.poi.EncryptedDocumentException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementClickInterceptedException;
@@ -19,6 +20,8 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 public class Keywords extends BasePack.BaseClass {
 	Screenshot sc = new Screenshot();
@@ -27,12 +30,13 @@ public class Keywords extends BasePack.BaseClass {
 	public String status = "";
 	public int opstatus = 0;
 	static String parentNode = "";
+	protected Log log = LogFactory.getLog(Keywords.class);
 
 	public void openPage(String ApplicationName) throws EncryptedDocumentException, IOException {
 
 		driver.get(new getExcelData().getURL(ApplicationName));
-		logger.log(Status.PASS, "Entered URL With : <a target='_blank' style='color:aqua'>"
-				+ new getExcelData().getURL(ApplicationName) + "</a>");
+		logger.log(Status.PASS,
+				"URL  : <a target='_blank' style='color:aqua'>" + new getExcelData().getURL(ApplicationName) + "</a>");
 	}
 
 	/***
@@ -77,8 +81,11 @@ public class Keywords extends BasePack.BaseClass {
 			status = "Fail" + "$" + "Exception:" + e.getClass().getCanonicalName() + " Unable to locate element-> "
 					+ loc.toString() + "$" + "";
 		}
+
 		return status;
 	}
+
+	// input[@class='checkbox' | @value='select']
 
 	/***
 	 * @description Enters Text into fields.
@@ -110,6 +117,7 @@ public class Keywords extends BasePack.BaseClass {
 		} catch (Exception e) {
 			status = "Fail" + "$" + "Unable to Enter text in  element-> " + loc.toString() + "$" + "";
 		}
+
 		return status;
 	}
 
@@ -145,6 +153,7 @@ public class Keywords extends BasePack.BaseClass {
 			status = "Fail" + "$" + "Exception:" + e.getClass().getCanonicalName()
 					+ " Unable to Enter text in  element-> " + loc.toString() + "$" + "";
 		}
+
 		return status;
 	}
 
@@ -180,6 +189,7 @@ public class Keywords extends BasePack.BaseClass {
 			status = "Fail" + "$" + "Exception:" + e.getClass().getCanonicalName()
 					+ " Unable to Enter text in  element-> " + loc.toString() + "$" + "";
 		}
+
 		return status;
 
 	}
@@ -187,16 +197,16 @@ public class Keywords extends BasePack.BaseClass {
 	/***
 	 * @description Wait for element to be located
 	 * @param loc
+	 * @throws Exception
+	 * @throws NumberFormatException
 	 */
-	public void wait(By loc) {
-
-		WebDriverWait wait2 = new WebDriverWait(driver, 30);
+	public void wait(By loc) throws NumberFormatException, Exception {
+		long timeOutInSeconds = Long.parseLong(getexcelinfo.getConfiguration("Defaultwaittime"));
+		WebDriverWait wait2 = new WebDriverWait(driver, timeOutInSeconds);
 		try {
 			wait2.until(ExpectedConditions.visibilityOfElementLocated(loc));
 		} catch (ElementClickInterceptedException e) {
 			wait2.until(ExpectedConditions.elementToBeClickable(loc));
-		} catch (Exception e) {
-
 		}
 	}
 
@@ -229,6 +239,7 @@ public class Keywords extends BasePack.BaseClass {
 		} catch (Exception e) {
 			status = "Fail" + "$" + "Unable to locate element  element-> " + loc.toString() + "$" + "";
 		}
+
 		return status;
 	}
 
@@ -290,6 +301,7 @@ public class Keywords extends BasePack.BaseClass {
 		} catch (Exception e) {
 			status = "Fail" + "$" + "Unable to locate element  element-> " + loc.toString() + "$" + "";
 		}
+
 		return status;
 
 	}
@@ -369,6 +381,37 @@ public class Keywords extends BasePack.BaseClass {
 	}
 
 	/***
+	 * @description Robot Click operations
+	 * @param Operation
+	 * @return
+	 * @throws Exception
+	 */
+	public String RobotClass(String Operation) throws Exception {
+
+		By loc = null;
+		try {
+			Robot robot = new Robot();
+			if (Operation.equalsIgnoreCase("tab")) {
+				robot.keyPress(KeyEvent.VK_TAB);
+				robot.keyRelease(KeyEvent.VK_TAB);
+			} else if (Operation.equalsIgnoreCase("enter")) {
+				robot.keyPress(KeyEvent.VK_ENTER);
+				robot.keyRelease(KeyEvent.VK_ENTER);
+			} else if (Operation.equalsIgnoreCase("down")) {
+				robot.keyPress(KeyEvent.VK_DOWN);
+				robot.keyRelease(KeyEvent.VK_DOWN);
+			}
+			acceptAlert();
+			String PassMsg = "clicked on " + Operation + " Button";
+			status = "Pass" + "$" + "Element present on screen" + PassMsg + "$" + sc.getScreenshot(PassMsg, loc);
+		} catch (Exception e) {
+			String FailMsg = "Unable to click on " + Operation + " Button";
+			status = "Fail" + "$" + "Element present on screen" + FailMsg + "$" + sc.getScreenshot(FailMsg, loc);
+		}
+		return status;
+	}
+
+	/***
 	 * @description Accept alerts
 	 */
 	public void acceptAlert() {
@@ -406,7 +449,7 @@ public class Keywords extends BasePack.BaseClass {
 		extent.attachReporter(spark);
 		File f = new File(srcPath);
 		System.out.println(f.getAbsolutePath());
-		//System.out.println(f.toString());
+		// System.out.println(f.toString());
 	}
 
 	/***
@@ -436,8 +479,8 @@ public class Keywords extends BasePack.BaseClass {
 					child.log(Status.PASS, StepData + "<a style='color:#32cd32;float: right'  data-featherlight = '"
 							+ href + "' href='" + href + "'>ScreenShot</a>");
 				} else if (StepStatus.equalsIgnoreCase("fail")) {
-					child.log(Status.FAIL, StepData + "<a style='color:red;float: right'  data-featherlight = '"
-							+ href + "' href='" + href + "'>ScreenShot</a>");
+					child.log(Status.FAIL, StepData + "<a style='color:red;float: right'  data-featherlight = '" + href
+							+ "' href='" + href + "'>ScreenShot</a>");
 					failflag = 1;
 				}
 			} else {

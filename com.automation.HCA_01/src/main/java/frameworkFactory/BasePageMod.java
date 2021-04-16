@@ -727,6 +727,7 @@ public class BasePageMod {
 		String tableRecords = "";
 		boolean boolFailInd = false;
 		boolean boolError = false;
+		System.out.println(reportData);
 		List<String> reportDataStart = new ArrayList<String>();
 		String reportString = "Info" + "~" + processName + "~Start~" + " ";
 		reportDataStart.add(reportString);

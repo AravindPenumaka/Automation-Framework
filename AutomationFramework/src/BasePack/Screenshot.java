@@ -1,19 +1,12 @@
 package BasePack;
 
-import ExcelUtility.getExcelData;
-
-import org.apache.commons.compress.archivers.ArchiveStreamProvider;
 import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.FilenameUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.UnhandledAlertException;
-import org.openqa.selenium.io.FileHandler;
 import java.io.File;
-import java.io.IOException;
-import ExcelUtility.*;
 
 public class Screenshot extends BaseClass {
 

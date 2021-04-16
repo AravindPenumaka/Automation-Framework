@@ -34,9 +34,10 @@ public class DemoElementsPage extends Reusables.Keywords {
 		result.add(enterText(ob.demoObj.Date, data.get("Date"),"Date"));
 		UploadFile(ob.demoObj.FileUpload, "sample.png");
 		result.add(click(ob.demoObj.Waitscenario, "click for wait"));
-		result.add(isElementDisplayed(ob.demoObj.WaitTest,"Test for wait"));
+		result.add(isElementDisplayed(ob.demoObj.WaitTest,"Dynamic Wait"));
 		System.out.println(getText(ob.demoObj.WaitTest));
-		addReport(result,"demoElementInteraction");
+		
+		addReport(result,"Demo Page element Interactions");
 	}
 
 }

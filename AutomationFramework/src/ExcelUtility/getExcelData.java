@@ -17,7 +17,7 @@ import org.testng.annotations.DataProvider;
 
 public class getExcelData {
 
-	File file = new File(System.getProperty("user.dir") + "\\TestData\\DataSheet.xlsx");
+	File file = new File(System.getProperty("user.dir") + "\\TestData\\TestData.xlsx");
 
 	@DataProvider(name = "TestData")
 	public Object[][] getData(Method m) throws EncryptedDocumentException, IOException {

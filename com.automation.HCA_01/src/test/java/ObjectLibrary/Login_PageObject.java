@@ -47,6 +47,18 @@ public class Login_PageObject {
 	
 	@FindBy(xpath = "//button[@class='btn btn-success btn-block']")
 	public WebElement btn_RouteOneLogin;
+	
+	@FindBy(xpath = "(//input[@type='text'])[2]")
+	public WebElement UsernameNew;
+	
+	@FindBy(xpath = "//input[@type='password']")
+	public WebElement PasswordNew;
+	
+	@FindBy(xpath = "(//button[@type='submit'])[2]")
+	public WebElement SubmitNew;
+	
+	@FindBy(xpath = "//button[@class='_2AkmmA _29YdH8']")
+	public WebElement CloseNew;
 }
 	        
 	

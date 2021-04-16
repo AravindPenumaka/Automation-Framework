@@ -138,7 +138,7 @@ public class BaseTestSuite {
 				+ new SimpleDateFormat("yyyy-MM-dd_HH-mm").format(new Date()) + ".html";
 		extent = ReportManager.getReporter(reportPath);
        
-		excelReport.onStartExcelStatusReport(reportFolderPath);
+		//excelReport.onStartExcelStatusReport(reportFolderPath);
 		
 		this.folderPath = reportFolderPath;
 		this.browser =browser;
@@ -183,7 +183,7 @@ public class BaseTestSuite {
 			System.out.println("screenshot functionmality to be updated");
 		} else {
 			screenShotCapture = readInputExecutionSheetValue(methodname, 6 , "Execution_Sheet");
-			excelReport.writeInToExcelStatusReport(classname, methodname, browser, screenShotCapture);
+			//excelReport.writeInToExcelStatusReport(classname, methodname, browser, screenShotCapture);
 		}
 		
 		driver = getDriver(host, browser);
@@ -263,7 +263,7 @@ public class BaseTestSuite {
 		DesiredCapabilities capabilities = DesiredCapabilities.internetExplorer();
 		switch (driverType) {
 		case CHROME:
-		    System.setProperty("webdriver.chrome.driver", "D:\\HCA\\chrome driver\\2.46\\chromedriver.exe");
+		    System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\Drivers\\chromedriver.exe");
 		    //capabilities.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, UnexpectedAlertBehaviour.ACCEPT);
 		    ChromeOptions options = new ChromeOptions(); 
 		    options.addArguments("disable-infobars");
@@ -344,8 +344,8 @@ public class BaseTestSuite {
 				logger.log(LogStatus.SKIP, "Test skipped " + result.getThrowable(), " ");
 			}
 			
-			excelReport.writeExcelTestCaseStatus(m.getName(),status);
-			excelReport.onFinishExcelStatusReport();
+			//excelReport.writeExcelTestCaseStatus(m.getName(),status);
+			//excelReport.onFinishExcelStatusReport();
 			
 		} catch (Exception e) {
 			e.printStackTrace();

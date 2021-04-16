@@ -6,9 +6,15 @@ import java.lang.reflect.Method;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
+import org.eclipse.jetty.client.ValidatingConnectionPool;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.ie.InternetExplorerDriverService;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
@@ -23,13 +29,11 @@ import Reusables.Keywords;
 
 public class BaseClass {
 
-	ExcelUtility.getExcelData getexcelinfo = new getExcelData();
+	protected ExcelUtility.getExcelData getexcelinfo = new getExcelData();
 	public static WebDriver driver;
 	public static String browser = "";
 	public static String Path = "";
-	//public static ExtentHtmlReporter reporter;
 	public static ExtentReports extent;
-	//public static ExtentReports extent;
 	public static ExtentTest logger;
 	public static ExtentSparkReporter spark;
 	public static ExtentTest child;
@@ -46,29 +50,57 @@ public class BaseClass {
 			System.setProperty("webdriver.chrome.driver",
 					System.getProperty("user.dir") + "\\Resources\\Drivers\\chromedriver.exe");
 			browser = "Chrome";
-			time = getCurrentTime();
-			extentreportLocation = System.getProperty("user.dir")+"./AutomationReports/"+time+"/Automationreport.html";
-			srcPath  = "./AutomationReports/"+time+"/Screenshots/";
-			report.initializeReport();
+			
+		}else if(getexcelinfo.getConfiguration("Browser").equalsIgnoreCase("Chrome Headless")){
+			System.setProperty("webdriver.chrome.driver",
+					System.getProperty("user.dir") + "\\Resources\\Drivers\\chromedriver.exe");
+			browser = "Chrome headless";
+		}else if(getexcelinfo.getConfiguration("Browser").equalsIgnoreCase("HTML Unit")){
+			
+		}else if(getexcelinfo.getConfiguration("Browser").equalsIgnoreCase("IE")){
+			System.setProperty("webdriver.ie.driver",
+					System.getProperty("user.dir") + "\\Resources\\Drivers\\IEDriverServer.exe");
+			browser = "IE";
+		}else if(getexcelinfo.getConfiguration("Browser").equalsIgnoreCase("HTML Unit")){
+			browser = "HTMLUnitDriver";
 		}
+		time = getCurrentTime();
+		extentreportLocation = System.getProperty("user.dir")+"./AutomationReports/"+time+"/Automationreport.html";
+		srcPath  = "./AutomationReports/"+time+"/Screenshots/";
+		report.initializeReport();
 	}
 
+	@SuppressWarnings("deprecation")
 	@BeforeMethod
 	public void onMethodStrat(Method method) {
 
+		ChromeOptions co=new ChromeOptions();
 		if (browser.equalsIgnoreCase("chrome")) {
-			ChromeOptions co=new ChromeOptions();
 			co.addArguments("--start-maximized");
 			driver = new ChromeDriver(co);
+			System.out.println("----------Started exceution of "+method.getName()+"----------");
+		}else if(browser.equalsIgnoreCase("Chrome headless")){
+			co.addArguments("--headless");
+			driver = new ChromeDriver(co);
+		}else if(browser.equalsIgnoreCase("IE")){
+			DesiredCapabilities ieCapabilities = new DesiredCapabilities();
+			ieCapabilities.setCapability(InternetExplorerDriver
+					 .INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,true);
+					ieCapabilities.setCapability("requireWindowFocus", true);
+			driver = new InternetExplorerDriver(ieCapabilities);
+			driver.manage().window().maximize();
+		}else if(browser.equalsIgnoreCase("HTMLUnitDriver")){
+			driver =new HtmlUnitDriver();
 		}
 		logger = extent.createTest(method.getName());
 		logger.assignCategory(method.getName().split("_")[0]);
 	}
 
 	@AfterMethod
-	public void onMethodEnd() {
+	public void onMethodEnd(Method m) {
 
 		driver.close();
+		System.out.println("----------End of exceution of "+m.getName()+"----------");
 	}
 
 	@AfterSuite
